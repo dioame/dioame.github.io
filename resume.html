@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume - Dioame Jade, Full Stack Developer">
+    <meta name="robots" content="noindex, nofollow">
     <title>Dioame Jade - Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,22 @@
             border-bottom: 3px solid var(--primary-color);
             padding-bottom: 20px;
             margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .resume-header-content {
+            flex: 1;
         }
 
         .resume-header h1 {
@@ -64,13 +81,15 @@
         .contact-info a {
             color: var(--text-light);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
 
         .contact-info a:hover {
             color: var(--primary-color);
+        }
+
+        .contact-info strong {
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
         .resume-section {
@@ -191,27 +210,284 @@
 
         /* Print Styles */
         @media print {
+            @page {
+                size: A4;
+                margin: 0.6in 0.7in;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             body {
-                padding: 20px;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                background: white;
+                font-size: 11pt;
+                line-height: 1.6;
+                color: #1e293b;
+            }
+
+            .resume-header {
+                border-bottom: 2.5px solid var(--primary-color);
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+                page-break-after: avoid;
+                display: flex;
+                align-items: flex-start;
+                gap: 18px;
+            }
+
+            .profile-image {
+                width: 90px;
+                height: 90px;
+                border-radius: 4px;
+                object-fit: cover;
+                border: 2.5px solid var(--primary-color);
+                flex-shrink: 0;
+            }
+
+            .resume-header-content {
+                flex: 1;
+            }
+
+            .resume-header h1 {
+                font-size: 24pt;
+                font-weight: 700;
+                margin-bottom: 5px;
+                color: #1e293b;
+                letter-spacing: -0.3px;
+                line-height: 1.2;
+            }
+
+            .resume-header .title {
+                font-size: 13pt;
+                font-weight: 600;
+                color: var(--primary-color);
+                margin-bottom: 12px;
+            }
+
+            .contact-info {
+                font-size: 9.5pt;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 18px;
+                color: #475569;
+                line-height: 1.8;
+            }
+
+            .contact-info > span {
+                display: inline-block;
+                white-space: nowrap;
+            }
+
+            .contact-info a {
+                color: #475569;
+                text-decoration: none;
+            }
+
+            .contact-info strong {
+                font-weight: 600;
+                color: #1e293b;
+                margin-right: 4px;
             }
 
             .resume-section {
                 page-break-inside: avoid;
+                margin-bottom: 20px;
+                orphans: 4;
+                widows: 4;
+            }
+
+            .resume-section h2 {
+                font-size: 13pt;
+                font-weight: 700;
+                color: var(--primary-color);
+                border-bottom: 2px solid #e2e8f0;
+                padding-bottom: 6px;
+                margin-bottom: 12px;
+                margin-top: 0;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                page-break-after: avoid;
+            }
+
+            .summary {
+                font-size: 10.5pt;
+                line-height: 1.7;
+                color: #1e293b;
+                text-align: justify;
+            }
+
+            .summary p {
+                margin: 0;
+            }
+
+            .skills-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .skill-category {
+                margin-bottom: 14px;
+                page-break-inside: avoid;
+            }
+
+            .skill-category h3 {
+                font-size: 10.5pt;
+                font-weight: 600;
+                color: #1e293b;
+                margin-bottom: 8px;
+            }
+
+            .skill-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                page-break-inside: avoid;
+            }
+
+            .skill-item {
+                font-size: 9.5pt;
+                padding: 4px 10px;
+                background-color: #f1f5f9 !important;
+                border: 1px solid #cbd5e1 !important;
+                border-radius: 3px;
+                color: #1e293b;
+                display: inline-block;
             }
 
             .experience-item {
                 page-break-inside: avoid;
+                margin-bottom: 16px;
+                orphans: 3;
+                widows: 3;
             }
 
+            .experience-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .experience-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 6px;
+                page-break-after: avoid;
+            }
+
+            .experience-title {
+                font-size: 11pt;
+                font-weight: 600;
+                color: #1e293b;
+            }
+
+            .experience-period {
+                font-size: 10pt;
+                color: #64748b;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            .experience-description {
+                font-size: 10pt;
+                color: #475569;
+                line-height: 1.6;
+                margin-top: 4px;
+            }
+
+            .expertise-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .expertise-item {
+                padding: 10px;
+                background-color: #f8fafc !important;
+                border-left: 3px solid var(--primary-color) !important;
+                border-radius: 3px;
+                page-break-inside: avoid;
+            }
+
+            .expertise-item h4 {
+                font-size: 10.5pt;
+                font-weight: 600;
+                color: #1e293b;
+                margin-bottom: 5px;
+            }
+
+            .expertise-item p {
+                font-size: 9.5pt;
+                color: #475569;
+                line-height: 1.5;
+                margin: 0;
+            }
+
+            /* Link handling for print */
             a {
-                color: var(--text-dark);
+                color: #1e293b !important;
                 text-decoration: none;
             }
 
-            .contact-info a::after {
-                content: " (" attr(href) ")";
-                font-size: 0.85rem;
-                color: var(--text-light);
+            a[href^="http"] {
+                color: var(--primary-color) !important;
+            }
+
+            /* Remove URL display for cleaner print */
+            a[href^="http"]:after,
+            a[href^="mailto"]:after,
+            a[href^="tel"]:after {
+                content: "";
+            }
+
+            .contact-info a {
+                display: inline;
+            }
+
+            /* Prevent page breaks in awkward places */
+            .experience-header {
+                page-break-after: avoid;
+            }
+
+            .experience-item + .experience-item {
+                margin-top: 12px;
+            }
+
+            /* Ensure proper spacing between pages */
+            .resume-section:first-of-type {
+                page-break-before: auto;
+            }
+
+            /* Better page break control */
+            .resume-section:not(:first-child) {
+                page-break-before: auto;
+            }
+
+            /* Prevent breaking sections across pages when possible */
+            .skills-container,
+            .expertise-grid {
+                page-break-inside: avoid;
+            }
+
+            /* Hide any interactive elements */
+            script {
+                display: none !important;
+            }
+
+            /* Remove any hover effects */
+            *:hover {
+                background-color: inherit !important;
+                color: inherit !important;
+            }
+
+            /* Ensure images print correctly */
+            img {
+                max-width: 100%;
+                height: auto;
             }
         }
 
@@ -219,6 +495,17 @@
         @media (max-width: 768px) {
             body {
                 padding: 20px 15px;
+            }
+
+            .resume-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
             }
 
             .resume-header h1 {
@@ -250,22 +537,17 @@
 <body>
     <!-- Resume Header -->
     <header class="resume-header">
-        <h1>Dioame Jade C. Rendon</h1>
-        <p class="title">Full Stack Developer</p>
-        <div class="contact-info">
-            <a href="mailto:dioamejade@gmail.com">
-                <span>Email:</span>
-                <span>dioamejade@gmail.com</span>
-            </a>
-            <a href="tel:+639467105070">
-                <span>Phone:</span>
-                <span>+63 946 710 5070</span>
-            </a>
-            <a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer">
-                <span>GitHub:</span>
-                <span>github.com/dioame</span>
-            </a>
-            <span>Location: Philippines</span>
+        <img src="images/profile.png" alt="Dioame Jade C. Rendon" class="profile-image">
+        <div class="resume-header-content">
+            <h1>Dioame Jade C. Rendon</h1>
+            <p class="title">Full Stack Developer</p>
+            <div class="contact-info">
+                <span><strong>Email:</strong> <a href="mailto:dioamejade@gmail.com">dioamejade@gmail.com</a></span>
+                <span><strong>Phone:</strong> <a href="tel:+639467105070">+63 946 710 5070</a></span>
+                <span><strong>GitHub:</strong> <a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer">github.com/dioame</a></span>
+                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dioame" target="_blank" rel="noopener noreferrer">linkedin.com/in/dioame</a></span>
+                <span><strong>Location:</strong> Philippines</span>
+            </div>
         </div>
     </header>
 
@@ -273,7 +555,7 @@
     <section class="resume-section">
         <h2>Professional Summary</h2>
         <div class="summary">
-            <p>Self-employed full-stack developer with 6+ years of professional experience building API-based systems and scalable applications. Specialized in creating backend solutions and developing mobile applications using FlutterFlow with API-based backends. Experienced in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs. Currently engaged in AI-assisted coding and developing innovative solutions.</p>
+            <p>Self-employed full-stack developer with 6+ years of professional experience building API-based systems and scalable applications. Specialized in creating backend solutions with complex database queries, implementing real-time communication using Laravel Reverb, and developing SSO systems with Laravel Passport. Experienced in API authentication using Laravel Sanctum and JWT, working with MySQL, NoSQL, Firebase, and Supabase databases. Proficient in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs. Currently engaged in AI-assisted coding and developing innovative solutions.</p>
         </div>
     </section>
 
@@ -349,6 +631,26 @@
                     <span class="skill-item">Third-party APIs</span>
                 </div>
             </div>
+            <div class="skill-category">
+                <h3>Database & Storage</h3>
+                <div class="skill-list">
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">Complex Queries</span>
+                    <span class="skill-item">NoSQL</span>
+                    <span class="skill-item">Firebase</span>
+                    <span class="skill-item">Supabase</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Authentication & Real-time</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Laravel Passport</span>
+                    <span class="skill-item">Laravel Sanctum</span>
+                    <span class="skill-item">Laravel Reverb</span>
+                    <span class="skill-item">JWT</span>
+                    <span class="skill-item">SSO Systems</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -361,7 +663,7 @@
                 <div class="experience-period">2018 - Present</div>
             </div>
             <div class="experience-description">
-                6+ years of professional development experience building scalable web and mobile applications with a focus on API-based backend systems and modern frontend frameworks.
+                6+ years of professional development experience building scalable web and mobile applications with a focus on API-based backend systems and modern frontend frameworks. Implemented real-time socket communication using Laravel Reverb, developed SSO systems with Laravel Passport, and integrated API authentication using Laravel Sanctum and JWT. Experienced in writing complex MySQL queries, working with NoSQL databases, and implementing Firebase and Supabase for data management and real-time features.
             </div>
         </div>
     </section>
@@ -385,6 +687,20 @@
             </div>
             <div class="experience-description">
                 Caraga State University
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Eligibility -->
+    <section class="resume-section">
+        <h2>Certifications & Eligibility</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="experience-title">Electronic Data Processing Specialist</div>
+                <div class="experience-period">Granted</div>
+            </div>
+            <div class="experience-description">
+                DICT (Department of Information and Communications Technology) and CSC (Civil Service Commission) Eligibility
             </div>
         </div>
     </section>
@@ -437,6 +753,18 @@
             <div class="expertise-item">
                 <h4>Full Stack Development</h4>
                 <p>Comprehensive experience in both frontend and backend development, creating end-to-end solutions from concept to deployment.</p>
+            </div>
+            <div class="expertise-item">
+                <h4>Real-time Communication</h4>
+                <p>Implemented real-time socket systems using Laravel Reverb for WebSocket functionality, enabling live updates and interactive features in applications.</p>
+            </div>
+            <div class="expertise-item">
+                <h4>Authentication Systems</h4>
+                <p>Developed SSO (Single Sign-On) systems using Laravel Passport, implemented API authentication with Laravel Sanctum, and integrated JWT-based authentication for secure access control.</p>
+            </div>
+            <div class="expertise-item">
+                <h4>Database Management</h4>
+                <p>Expert in writing complex MySQL queries, working with NoSQL databases, and implementing Firebase and Supabase for scalable data storage and real-time synchronization.</p>
             </div>
         </div>
     </section>
