@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Full Stack Developer specializing in API-based systems, Laravel, React, Vue, and cloud infrastructure">
+    <title>Dioame Jade - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Dioame</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <div class="avatar-placeholder">
+                        <img src="images/profile.png" alt="Dioame Jade">
+                        <p class="avatar-hint">Add your photo here</p>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1>Dioame Jade</h1>
+                    <p class="subtitle">Full Stack Developer</p>
+                    <p class="description">Self-employed developer with 6+ years of experience building robust, API-based systems and scalable applications.</p>
+                    <div class="hero-badges">
+                        <span class="badge">Self-Employed</span>
+                        <span class="badge">API Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate full-stack developer with over 6 years of experience in web and mobile development. I specialize in creating API-based backend systems and have built numerous scalable applications throughout my career.</p>
+                <p>Currently, I'm engaged in AI-assisted coding and developing mobile applications using FlutterFlow with API-based backends. I have experience in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Core Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Django</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FlutterFlow</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & CI/CD</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab Runners</span>
+                        <span class="skill-tag">Gitflow</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Server & Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">Caddy Server</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AWS & Cloud Services</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">Amazon Bedrock</span>
+                        <span class="skill-tag">AWS Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & APIs</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Google Gemini</span>
+                        <span class="skill-tag">Amazon Bedrock</span>
+                        <span class="skill-tag">AI Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Payment Integration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AltPayNet</span>
+                        <span class="skill-tag">Third-party APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Expertise</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Self-Employed Developer</h3>
+                    <p>6+ years of professional development experience</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>API-Based Systems</h3>
+                    <p>Extensive experience building robust, scalable API backends for various applications</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile App Development</h3>
+                    <p>Developing mobile applications using FlutterFlow with API-based backend integration</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>CI/CD Implementation</h3>
+                    <p>Setting up and managing CI/CD pipelines using Jenkins and GitLab Runners with Gitflow workflow</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Deploying applications on Nginx and Caddy servers, managing AWS EC2 instances and RDS databases</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Integration</h3>
+                    <p>Integrating AI services including Amazon Bedrock, Google Gemini, and OpenAI APIs into applications</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Payment Systems</h3>
+                    <p>Implementing payment integrations using third-party services like AltPayNet</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>AI-Assisted Coding</h3>
+                    <p>Leveraging AI tools to enhance development workflow and productivity</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-plug"></i></div>
+                    <h3>Socket Integration</h3>
+                    <p>Implementing real-time communication using WebSocket technology for live updates and interactive features</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-broadcast-tower"></i></div>
+                    <h3>Laravel Reverb</h3>
+                    <p>Building real-time applications with Laravel Reverb for WebSocket server functionality and event broadcasting</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-key"></i></div>
+                    <h3>Laravel Passport</h3>
+                    <p>Implementing OAuth2 authentication and API token management using Laravel Passport for secure API access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Please message first before calling thank you.</p>
+                <div class="contact-methods">
+                    <a href="mailto:dioamejade@gmail.com" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>dioamejade@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+639467105070" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+63 946 710 5070</p>
+                            <small>Please message first before calling thank you.</small>
+                        </div>
+                    </a>
+                    <a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>github.com/dioame</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Connect on LinkedIn</p>
+                        </div>
+                    </a>
+                    <a href="https://web.facebook.com/dioame.rendon/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-facebook"></i></div>
+                        <div class="contact-details">
+                            <h3>Facebook</h3>
+                            <p>dioame.rendon</p>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1nW61KFftWrLMhBa1STuQq3eXwMNMYaGZ" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="contact-details">
+                            <h3>Certificates</h3>
+                            <p>View my certificates</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dioame Jade. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
