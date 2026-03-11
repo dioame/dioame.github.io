@@ -94,7 +94,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe sections and cards (hero excluded; entrance handled by CSS)
-document.querySelectorAll('section:not(#home) .section-title, section:not(#home) .about-content, .skill-category, .experience-card, .contact-item').forEach(el => {
+document.querySelectorAll('section:not(#home) .section-title, section:not(#home) .about-content, .skill-category, .experience-card, .contact-item, .mobile-apps-title, .hobby-system-content').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
