@@ -72,26 +72,32 @@ if (avatarPlaceholder) {
     avatarPlaceholder.title = 'Click to upload your photo';
 }
 
-// Add fade-in animation on scroll
+// Add fade-in animation on scroll with staggered delay for grids
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const stagger = el.classList.contains('skill-category') || el.classList.contains('experience-card') || el.classList.contains('contact-item')
+            ? (Array.from(el.parentElement.children).indexOf(el) * 0.06)
+            : 0;
+        const delay = prefersReducedMotion ? 0 : stagger;
+        el.style.transitionDelay = `${delay}s`;
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
     });
 }, observerOptions);
 
-// Observe all sections and cards
-document.querySelectorAll('section, .skill-category, .experience-card, .contact-item').forEach(el => {
+// Observe sections and cards (hero excluded; entrance handled by CSS)
+document.querySelectorAll('section:not(#home) .section-title, section:not(#home) .about-content, .skill-category, .experience-card, .contact-item').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
     observer.observe(el);
 });
 
