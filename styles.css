@@ -20,6 +20,12 @@
     --radius: 16px;
     --radius-sm: 10px;
     --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Alternating section backgrounds — soft blue-purple, not too dark */
+    --bg-section-dark: #6366f1;
+    --bg-section-dark-soft: #818cf8;
+    --bg-section-dark-end: #a5b4fc;
+    --text-on-dark: #ffffff;
+    --text-on-dark-muted: rgba(255, 255, 255, 0.85);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -477,9 +483,23 @@ section {
     z-index: 1;
 }
 
-/* About Section */
+/* Skills Section — soft dark (hero-like blue-purple) */
+.skills {
+    background: linear-gradient(180deg, var(--bg-section-dark) 0%, var(--bg-section-dark-soft) 50%, var(--bg-section-dark-end) 100%);
+}
+
+.skills .section-title {
+    color: var(--text-on-dark);
+}
+
+.skills .skill-vector {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 0.5;
+}
+
+/* About Section — light */
 .about {
-    background: var(--bg-light);
+    background: var(--bg-white);
 }
 
 .about-content {
@@ -525,13 +545,13 @@ section {
 }
 
 .skill-category-highlight {
-    border: 2px solid rgba(99, 102, 241, 0.35);
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(129, 140, 248, 0.04) 100%);
-    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .skill-category-highlight h3 {
-    color: var(--primary-color);
+    color: #ffffff;
 }
 
 .skill-tags {
@@ -559,7 +579,7 @@ section {
     box-shadow: 0 4px 12px var(--primary-glow);
 }
 
-/* Experience Section */
+/* Experience Section — light */
 .experience {
     background: var(--bg-light);
 }
@@ -628,9 +648,17 @@ section {
     border-bottom-color: var(--primary-color);
 }
 
-/* Hobby System Section */
+/* Hobby System Section — soft dark (hero-like blue-purple) */
 .hobby-system {
-    background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+    background: linear-gradient(180deg, var(--bg-section-dark) 0%, var(--bg-section-dark-soft) 50%, var(--bg-section-dark-end) 100%);
+}
+
+.hobby-system .section-title {
+    color: var(--text-on-dark);
+}
+
+.hobby-system-intro {
+    color: var(--text-on-dark-muted);
 }
 
 .hobby-system-content {
@@ -641,7 +669,6 @@ section {
 
 .hobby-system-intro {
     font-size: 1.1rem;
-    color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -676,7 +703,65 @@ section {
     opacity: 0.9;
 }
 
-/* Contact Section */
+/* Documents Section — light */
+.documents {
+    background: var(--bg-white);
+}
+
+.documents-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.documents-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.25rem;
+    background: var(--bg-white);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.documents-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.documents-icon {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.documents-item:hover .documents-icon {
+    color: var(--primary-dark);
+}
+
+/* Contact Section — soft dark (hero-like blue-purple) */
+.contact {
+    background: linear-gradient(180deg, var(--bg-section-dark) 0%, var(--bg-section-dark-soft) 50%, var(--bg-section-dark-end) 100%);
+}
+
+.contact .section-title {
+    color: var(--text-on-dark);
+}
+
+.contact-intro {
+    color: var(--text-on-dark-muted);
+}
+
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
@@ -685,7 +770,6 @@ section {
 .contact-intro {
     text-align: center;
     font-size: 1.1rem;
-    color: var(--text-light);
     margin-bottom: 3rem;
     line-height: 1.8;
 }
@@ -766,7 +850,11 @@ section {
 .mobile-apps {
     margin-top: 3rem;
     padding-top: 2.5rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact .mobile-apps-title {
+    color: var(--text-on-dark);
 }
 
 .mobile-apps-title {
