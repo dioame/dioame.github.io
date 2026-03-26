@@ -1,9 +1,42 @@
+const navbar = document.querySelector('.navbar');
+const navMenu = document.querySelector('.nav-menu');
+const navToggle = document.querySelector('.nav-toggle');
+
+function closeMobileNav() {
+    if (!navbar || !navMenu || !navToggle) return;
+    navbar.classList.remove('nav-open');
+    navMenu.classList.remove('nav-menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation menu');
+}
+
+function openMobileNav() {
+    if (!navbar || !navMenu || !navToggle) return;
+    navbar.classList.add('nav-open');
+    navMenu.classList.add('nav-menu-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Close navigation menu');
+}
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.contains('nav-menu-open');
+        if (isOpen) {
+            closeMobileNav();
+            return;
+        }
+
+        openMobileNav();
+    });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
+            closeMobileNav();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -32,6 +65,18 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 480) {
+        closeMobileNav();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeMobileNav();
+    }
 });
 
 // Avatar image upload functionality (optional enhancement)
