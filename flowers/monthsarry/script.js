@@ -1,9 +1,4 @@
 window.onload = () => {
-  const c = setTimeout(() => {
-    document.body.classList.remove("not-loaded");
-    clearTimeout(c);
-  }, 1000);
-
   const audio = document.getElementById("bg-music");
   const openMessageButton = document.getElementById("open-message");
   const messageCard = document.getElementById("message-card");
@@ -20,14 +15,11 @@ window.onload = () => {
     }
   };
 
-  setTimeout(() => {
-    openMessageButton.classList.add("is-visible");
-  }, 6500);
-
   openMessageButton.addEventListener("click", () => {
+    document.body.classList.remove("not-loaded");
     messageCard.classList.add("is-visible");
     messageCard.setAttribute("aria-hidden", "false");
-    openMessageButton.classList.remove("is-visible");
+    openMessageButton.classList.add("is-hidden");
     openMessageButton.disabled = true;
     tryPlay();
   });
