@@ -1205,11 +1205,11 @@ body.flowers-only .flowers-stage {
     min-height: 100vh;
     max-height: 100vh;
     align-items: flex-end;
-    padding-bottom: 2vh;
+    padding-bottom: 16vh;
   }
 
   body.flowers-only .flowers {
-    transform: scale(0.94);
+    transform: scale(1.42);
   }
 }
 
@@ -1222,10 +1222,10 @@ body.flowers-only .flowers-stage {
     min-height: 100vh;
     max-height: 100vh;
     align-items: flex-end;
-    padding-bottom: 2vh;
+    padding-bottom: 13vh;
   }
 
   body.flowers-only .flowers {
-    transform: scale(0.9);
+    transform: scale(1.32);
   }
 }
