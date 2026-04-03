@@ -11,14 +11,21 @@
 }
 
 body {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
   font-family: "Georgia", "Times New Roman", serif;
+}
+
+.scene {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 1.25rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .night {
@@ -37,10 +44,18 @@ body {
   transform: scale(0.9);
 }
 
+.flowers-stage {
+  position: relative;
+  width: min(100%, 58rem);
+  min-height: 58vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: auto;
+}
+
 .message-card {
-  position: fixed;
-  top: 3rem;
-  left: 50%;
+  position: relative;
   z-index: 200;
   width: min(92vw, 42rem);
   padding: 1.4rem 1.6rem;
@@ -51,16 +66,21 @@ body {
   border-radius: 24px;
   backdrop-filter: blur(14px);
   box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.32);
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50%) translateY(1.5rem) scale(0.98);
-  transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(1.5rem) scale(0.98);
+  transition: opacity 1s ease, transform 1s ease, visibility 1s ease, max-height 1s ease;
 }
 
 .message-card.is-visible {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0) scale(1);
+  max-height: 30rem;
+  transform: translateY(0) scale(1);
 }
 
 .message-card__eyebrow {
@@ -94,9 +114,7 @@ body {
 }
 
 .open-message {
-  position: fixed;
-  left: 50%;
-  bottom: 3rem;
+  position: relative;
   z-index: 220;
   padding: 0.95rem 1.8rem;
   border: 1px solid rgba(255, 216, 230, 0.55);
@@ -110,20 +128,17 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 1rem 2.5rem rgba(255, 93, 146, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-50%) translateY(1rem);
-  transition: opacity 1.4s ease, transform 1.4s ease, visibility 1.4s ease, box-shadow 0.3s ease;
-}
-
-.open-message.is-visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  margin-top: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
 }
 
 .open-message:hover {
   box-shadow: 0 1.2rem 2.8rem rgba(255, 93, 146, 0.42);
+}
+
+.open-message.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .flower {
@@ -1076,22 +1091,44 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
-    align-items: center;
-  }
-
   .message-card {
-    top: 1rem;
     padding: 1.1rem 1rem;
+    margin-top: 1rem;
   }
 
   .open-message {
-    bottom: 1.5rem;
     padding: 0.85rem 1.35rem;
     font-size: 0.9rem;
   }
 
+  .scene {
+    padding: 1rem 0.75rem 0;
+  }
+
+  .flowers-stage {
+    min-height: 50vh;
+  }
+
   .flowers {
-    transform: scale(0.62);
+    transform: scale(0.58);
+  }
+}
+
+@media (max-width: 420px) {
+  .flowers {
+    transform: scale(0.48);
+  }
+
+  .flowers-stage {
+    min-height: 45vh;
+  }
+
+  .message-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .message-card__text {
+    font-size: 0.96rem;
+    line-height: 1.6;
   }
 }
