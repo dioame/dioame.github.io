@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Portfolio - Full Stack Developer specializing in API-based systems, Laravel, React, Vue, and cloud infrastructure">
+    <meta name="theme-color" content="#0a2624">
     <title>Dioame Jade - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <div class="nav-header">
                 <div class="nav-brand">Dioame</div>
@@ -36,6 +38,7 @@
         </div>
     </nav>
 
+    <main id="main">
     <!-- Hero Section with Vector Animation -->
     <section id="home" class="hero">
         <!-- Animated vector background -->
@@ -73,10 +76,14 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="avatar-container">
+                    <div class="avatar-frame-corner avatar-frame-corner--tl" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--tr" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--bl" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--br" aria-hidden="true"></div>
                     <div class="avatar-ring">
                         <svg class="avatar-ring-svg" viewBox="0 0 220 220" aria-hidden="true">
-                            <circle class="avatar-ring-circle" cx="110" cy="110" r="100" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-dasharray="4 8" />
-                            <circle class="avatar-ring-circle avatar-ring-circle-2" cx="110" cy="110" r="108" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+                            <circle class="avatar-ring-circle" cx="110" cy="110" r="100" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="4 8" />
+                            <circle class="avatar-ring-circle avatar-ring-circle-2" cx="110" cy="110" r="108" fill="none" stroke="rgba(201,169,98,0.35)" stroke-width="1" />
                         </svg>
                     </div>
                     <div class="avatar-placeholder">
@@ -85,14 +92,26 @@
                     </div>
                 </div>
                 <div class="hero-text">
-                    <h1>Dioame Jade</h1>
+                    <p class="hero-eyebrow">Independent studio · Remote-friendly · API-first delivery</p>
+                    <h1 class="hero-title"><span class="hero-title-line">Dioame</span> <span class="hero-title-accent">Jade</span></h1>
                     <p class="subtitle">Full Stack Developer / Prompt Engineer</p>
-                    <p class="description">Self-employed developer with 7+ years of experience building robust, API-based systems and scalable applications.</p>
+                    <div class="hero-stats" role="list" aria-label="Highlights">
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">7+</span><span class="hero-stat-label">Years building</span></div>
+                        <div class="hero-stat-divider" aria-hidden="true"></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">API</span><span class="hero-stat-label">Systems core</span></div>
+                        <div class="hero-stat-divider" aria-hidden="true"></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">AI</span><span class="hero-stat-label">Integrated workflows</span></div>
+                    </div>
+                    <p class="description">Self-employed developer crafting robust, API-based backends and scalable applications—with disciplined architecture and thoughtful interfaces.</p>
                     <div class="hero-badges">
                         <span class="badge">Self-Employed</span>
                         <span class="badge">API Specialist</span>
                     </div>
-                    <p class="hero-prompt-highlight">This site is made from prompt</p>
+                    <div class="hero-actions">
+                        <a href="resume.html" class="btn btn-primary">View resume</a>
+                        <a href="#contact" class="btn btn-ghost">Schedule a conversation</a>
+                    </div>
+                    <p class="hero-prompt-highlight">Crafted with AI-assisted development</p>
                 </div>
             </div>
         </div>
@@ -100,6 +119,35 @@
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--about-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.14)" />
+                        <stop offset="100%" stop-color="rgba(14,165,233,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--about-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,23,42,0.06)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--about-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.08)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
         <div class="section-accent about-accent" aria-hidden="true">
             <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                 <path class="accent-path" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 4" d="M20 60 Q60 20 100 60" />
@@ -107,7 +155,8 @@
             </svg>
         </div>
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <p class="section-eyebrow">Profile</p>
+            <h2 class="section-title">About</h2>
             <div class="about-content">
                 <p>I'm a passionate full-stack developer with over 7 years of experience in web and mobile development. I specialize in creating API-based backend systems and have built numerous scalable applications throughout my career.</p>
                 <p>Currently, I'm engaged in AI-assisted coding and developing mobile applications using FlutterFlow with API-based backends. I have experience in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs.</p>
@@ -120,8 +169,36 @@
         <div class="skills-bg-vectors" aria-hidden="true">
             <div class="skill-vector skill-vector-1"></div>
             <div class="skill-vector skill-vector-2"></div>
+            <svg class="section-blob section-blob--skills-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.12)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--skills-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.18)" />
+                        <stop offset="100%" stop-color="rgba(56,189,248,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--skills-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
         </div>
         <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Capabilities</p>
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -210,7 +287,39 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-flow section-flow--exp" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-flow-grad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.2)" />
+                        <stop offset="50%" stop-color="rgba(14,165,233,0.12)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.15)" />
+                    </linearGradient>
+                </defs>
+                <path class="section-flow-path section-flow-path--a" fill="none" stroke="url(#exp-flow-grad)" stroke-width="1.25" d="M0,200 C280,60 520,280 780,140 C920,70 1040,220 1200,100" />
+                <path class="section-flow-path section-flow-path--b" fill="none" stroke="rgba(15,23,42,0.08)" stroke-width="1" d="M0,120 C340,220 560,40 880,180 C1000,240 1120,80 1200,160" />
+            </svg>
+            <svg class="section-blob section-blob--exp-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,23,42,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#exp-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--exp-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-vgrad-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.07)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#exp-vgrad-2)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
         <div class="container">
+            <p class="section-eyebrow">Practice areas</p>
             <h2 class="section-title">Experience & Expertise</h2>
             <div class="experience-grid">
                 <div class="experience-card">
@@ -279,7 +388,37 @@
 
     <!-- Prompt-Based Hobby System Section -->
     <section id="hobby-system" class="hobby-system">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--hobby-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.12)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--hobby-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.16)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--hobby-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-3" x1="50%" y1="0%" x2="50%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(56,189,248,0.08)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.03)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
         <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Side builds</p>
             <h2 class="section-title">Prompt-Based Hobby System</h2>
             <div class="hobby-system-content">
                 <p class="hobby-system-intro">Built with AI-assisted development — side projects and hobby apps.</p>
@@ -287,6 +426,7 @@
                     <a href="http://tabulatorapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="DSWD KORAMBUSAN 2026"><i class="fas fa-trophy" aria-hidden="true"></i><span class="sr-only">DSWD KORAMBUSAN 2026</span></a>
                     <a href="https://greetingsapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="Awesome Greetings By Dioame"><i class="fas fa-gift" aria-hidden="true"></i><span class="sr-only">Awesome Greetings By Dioame</span></a>
                     <a href="https://myfundtracker-lime.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="FundTracker Pro"><i class="fas fa-chart-line" aria-hidden="true"></i><span class="sr-only">FundTracker Pro</span></a>
+                    <a href="https://wampdf.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="wampdf — merge PDFs & images"><i class="fas fa-file-pdf" aria-hidden="true"></i><span class="sr-only">wampdf — merge PDFs & images</span></a>
                 </div>
                 <div class="hobby-system-links">
                     <a href="http://tabulatorapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-system-link">
@@ -304,6 +444,11 @@
                         <span class="hobby-system-link-text">FundTracker Pro</span>
                         <span class="hobby-system-link-arrow"><i class="fas fa-external-link-alt"></i></span>
                     </a>
+                    <a href="https://wampdf.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-system-link">
+                        <span class="hobby-system-link-icon"><i class="fas fa-file-pdf"></i></span>
+                        <span class="hobby-system-link-text">wampdf — Merge PDFs & images</span>
+                        <span class="hobby-system-link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -311,7 +456,28 @@
 
     <!-- Documents Section -->
     <section id="documents" class="documents">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--docs-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="docs-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.1)" />
+                        <stop offset="100%" stop-color="rgba(15,23,42,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#docs-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--docs-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="docs-vgrad-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.08)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#docs-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+        </div>
         <div class="container">
+            <p class="section-eyebrow">Records</p>
             <h2 class="section-title">Documents</h2>
             <div class="documents-list">
                 <a href="resume.html" class="documents-item">
@@ -336,16 +502,55 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-flow section-flow--contact" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-flow-grad" x1="0" y1="1" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.22)" />
+                        <stop offset="100%" stop-color="rgba(56,189,248,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path class="section-flow-path section-flow-path--c" fill="none" stroke="url(#contact-flow-grad)" stroke-width="1.2" d="M0,240 C360,80 720,320 1200,120" />
+            </svg>
+            <svg class="section-blob section-blob--contact-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.14)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--contact-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.12)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-2)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--contact-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(56,189,248,0.1)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-3)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+        </div>
         <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Contact</p>
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Please message first before calling thank you.</p>
                 <div class="contact-methods">
-                    <a href="mailto:dioamejade@gmail.com" class="contact-item">
+                    <a href="mailto:dioamejade.online@gmail.com" class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p>dioamejade@gmail.com</p>
+                            <p>dioamejade.online@gmail.com</p>
                         </div>
                     </a>
                     <a href="tel:+639467105070" class="contact-item">
@@ -415,10 +620,12 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Dioame Jade. All rights reserved.</p>
+            <p>&copy; 2026 Dioame Jade. All rights reserved.</p>
         </div>
     </footer>
 

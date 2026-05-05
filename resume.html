@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume - Dioame Jade, Full Stack Developer">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a2624">
     <title>Dioame Jade - Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,25 +18,161 @@
         }
 
         :root {
-            --primary-color: #2563eb;
-            --text-dark: #1e293b;
+            --primary-color: #0f766e;
+            --primary-dark: #115e59;
+            --brass: #c9a962;
+            --text-dark: #134e4a;
+            --text-muted: #3f6f6a;
             --text-light: #64748b;
-            --border-color: #e2e8f0;
+            --border-color: rgba(19, 78, 74, 0.14);
+            --surface: #fafaf8;
+            --page-bg: #f5f3ee;
+            --font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
+            --font-body: 'Josefin Sans', system-ui, sans-serif;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -120px;
+            z-index: 10001;
+            padding: 0.6rem 1rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.8125rem;
+            color: #f8fafc;
+            background: var(--primary-color);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+            outline: 2px solid #f8fafc;
+            outline-offset: 3px;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.65;
             color: var(--text-dark);
-            background-color: #ffffff;
+            background:
+                radial-gradient(ellipse 120% 80% at 10% -10%, rgba(15, 118, 110, 0.06), transparent 55%),
+                radial-gradient(ellipse 90% 60% at 100% 0%, rgba(201, 169, 98, 0.05), transparent 50%),
+                linear-gradient(165deg, #eef8f6 0%, var(--page-bg) 42%, #fafaf8 100%);
+            min-height: 100vh;
+        }
+
+        .resume-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin: 0 auto 1.25rem;
+            max-width: 960px;
+            width: calc(100% - 2rem);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(14px) saturate(1.2);
+            -webkit-backdrop-filter: blur(14px) saturate(1.2);
+            border: 1px solid rgba(19, 78, 74, 0.1);
+            border-radius: 999px;
+            box-shadow: 0 12px 40px -20px rgba(15, 23, 42, 0.16);
+        }
+
+        .resume-topbar a,
+        .resume-topbar button {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            border-radius: 999px;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .resume-topbar a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        .resume-topbar a:hover {
+            border-color: rgba(15, 118, 110, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .resume-topbar a:focus-visible,
+        .resume-topbar button:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 3px;
+        }
+
+        .resume-topbar button {
+            padding: 0.5rem 1.1rem;
+            color: #f8fafc;
+            background: var(--primary-color);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 20px rgba(15, 118, 110, 0.28);
+        }
+
+        .resume-topbar button:hover {
+            background: #14b8a6;
+            transform: translateY(-1px);
+        }
+
+        .resume-shell {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 30px;
+            padding: 0.5rem 1.25rem 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .resume-shell {
+                padding: 0.75rem 1.75rem 3.5rem;
+            }
+        }
+
+        .resume-shell-inner {
+            background: var(--surface);
+            border-radius: 20px;
+            border: 1px solid rgba(19, 78, 74, 0.1);
+            box-shadow: 0 24px 60px -28px rgba(15, 23, 42, 0.18);
+            padding: 2rem 1.75rem 2.5rem;
+            animation: resume-in 0.65s cubic-bezier(0.4, 0, 0.2, 1) both;
+        }
+
+        @keyframes resume-in {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .resume-shell-inner {
+                animation: none;
+            }
         }
 
         .resume-header {
             border-bottom: 3px solid var(--primary-color);
             padding-bottom: 20px;
+            box-shadow: 0 1px 0 0 rgba(201, 169, 98, 0.5);
             margin-bottom: 30px;
             display: flex;
             align-items: flex-start;
@@ -45,9 +182,10 @@
         .profile-image {
             width: 120px;
             height: 120px;
-            border-radius: 8px;
+            border-radius: 14px;
             object-fit: cover;
-            border: 3px solid var(--primary-color);
+            border: 2px solid rgba(15, 118, 110, 0.42);
+            box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.2);
             flex-shrink: 0;
         }
 
@@ -56,18 +194,23 @@
         }
 
         .resume-header h1 {
-            font-size: 2.5rem;
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 5vw, 2.5rem);
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 5px;
-            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+            line-height: 1.15;
         }
 
         .resume-header .title {
-            font-size: 1.25rem;
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
             color: var(--primary-color);
             font-weight: 600;
             margin-bottom: 15px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
         }
 
         .contact-info {
@@ -75,16 +218,18 @@
             flex-wrap: wrap;
             gap: 20px;
             font-size: 0.95rem;
-            color: var(--text-light);
+            color: var(--text-muted);
         }
 
         .contact-info a {
-            color: var(--text-light);
+            color: var(--text-muted);
             text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
         }
 
         .contact-info a:hover {
-            color: var(--primary-color);
+            color: var(--primary-dark);
         }
 
         .contact-info strong {
@@ -97,14 +242,27 @@
         }
 
         .resume-section h2 {
-            font-size: 1.5rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--text-dark);
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 8px;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resume-section h2::before {
+            content: '';
+            width: 4px;
+            height: 1.1em;
+            border-radius: 999px;
+            background: linear-gradient(180deg, var(--primary-color), rgba(201, 169, 98, 0.45));
+            flex-shrink: 0;
         }
 
         .summary {
@@ -125,8 +283,10 @@
         }
 
         .skill-category h3 {
-            font-size: 1.1rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
             font-weight: 600;
+            letter-spacing: 0.04em;
             color: var(--text-dark);
             margin-bottom: 10px;
         }
@@ -138,12 +298,18 @@
         }
 
         .skill-item {
-            background-color: #f8fafc;
+            background-color: #f0fdfa;
             padding: 6px 12px;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 0.9rem;
             color: var(--text-dark);
             border: 1px solid var(--border-color);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-item:hover {
+            border-color: rgba(15, 118, 110, 0.38);
+            box-shadow: 0 4px 14px -6px rgba(15, 23, 42, 0.12);
         }
 
         .experience-item {
@@ -164,8 +330,10 @@
         }
 
         .experience-title {
-            font-size: 1.15rem;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
             font-weight: 600;
+            letter-spacing: 0.03em;
             color: var(--text-dark);
         }
 
@@ -190,13 +358,20 @@
 
         .expertise-item {
             padding: 12px;
-            background-color: #f8fafc;
+            background-color: #f0fdfa;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
             border-left: 3px solid var(--primary-color);
-            border-radius: 4px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .expertise-item:hover {
+            box-shadow: 0 8px 24px -12px rgba(15, 23, 42, 0.12);
         }
 
         .expertise-item h4 {
-            font-size: 1rem;
+            font-family: var(--font-body);
+            font-size: 0.98rem;
             font-weight: 600;
             color: var(--text-dark);
             margin-bottom: 5px;
@@ -220,18 +395,42 @@
                 print-color-adjust: exact !important;
             }
 
+            .resume-topbar,
+            .skip-link {
+                display: none !important;
+            }
+
             body {
                 padding: 0;
                 margin: 0;
                 max-width: 100%;
-                background: white;
+                background: white !important;
                 font-size: 11pt;
                 line-height: 1.6;
-                color: #1e293b;
+                color: #134e4a;
+            }
+
+            .resume-shell {
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+
+            .resume-shell-inner {
+                border: none !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                animation: none !important;
+            }
+
+            .skill-item:hover,
+            .expertise-item:hover {
+                box-shadow: none !important;
             }
 
             .resume-header {
                 border-bottom: 2.5px solid var(--primary-color);
+                box-shadow: none;
                 padding-bottom: 15px;
                 margin-bottom: 20px;
                 page-break-after: avoid;
@@ -493,8 +692,17 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 20px 15px;
+            .resume-shell {
+                padding: 0.25rem 0.85rem 2.5rem;
+            }
+
+            .resume-shell-inner {
+                padding: 1.5rem 1.15rem 2rem;
+            }
+
+            .resume-topbar {
+                width: calc(100% - 1.25rem);
+                border-radius: 16px;
             }
 
             .resume-header {
@@ -535,6 +743,13 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#resume-main">Skip to resume content</a>
+    <header class="resume-topbar" aria-label="Resume actions">
+        <a href="index.html">← Back to portfolio</a>
+        <button type="button" id="resume-print-btn">Print / Save as PDF</button>
+    </header>
+    <div class="resume-shell">
+    <div class="resume-shell-inner" id="resume-main">
     <!-- Resume Header -->
     <header class="resume-header">
         <img src="images/profile.png" alt="Dioame Jade C. Rendon" class="profile-image">
@@ -542,7 +757,7 @@
             <h1>Dioame Jade C. Rendon</h1>
             <p class="title">Full Stack Developer</p>
             <div class="contact-info">
-                <span><strong>Email:</strong> <a href="mailto:dioamejade@gmail.com">dioamejade@gmail.com</a></span>
+                <span><strong>Email:</strong> <a href="mailto:dioamejade.online@gmail.com">dioamejade.online@gmail.com</a></span>
                 <span><strong>Phone:</strong> <a href="tel:+639467105070">+63 946 710 5070</a></span>
                 <span><strong>GitHub:</strong> <a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer">github.com/dioame</a></span>
                 <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dioame" target="_blank" rel="noopener noreferrer">linkedin.com/in/dioame</a></span>
@@ -693,6 +908,14 @@
         </div>
         <div class="experience-item">
             <div class="experience-header">
+                <div class="experience-title">wampdf — PDF & image merge</div>
+            </div>
+            <div class="experience-description">
+                Browser-based tool to combine PDFs and images, reorder pages, preview, and download. <a href="https://wampdf.vercel.app/" target="_blank" rel="noopener noreferrer">wampdf.vercel.app</a>
+            </div>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
                 <div class="experience-title">Mobile Apps (Google Play)</div>
             </div>
             <div class="experience-description">
@@ -809,9 +1032,14 @@
         </div>
     </section>
 
+    </div>
+    </div>
+
     <script>
-        // Add print functionality
-        document.addEventListener('keydown', function(e) {
+        document.getElementById('resume-print-btn')?.addEventListener('click', function () {
+            window.print();
+        });
+        document.addEventListener('keydown', function (e) {
             if (e.ctrlKey && e.key === 'p') {
                 e.preventDefault();
                 window.print();
