@@ -96,7 +96,7 @@ if (avatarPlaceholder) {
                     img.style.width = '100%';
                     img.style.height = '100%';
                     img.style.objectFit = 'cover';
-                    img.style.borderRadius = '50%';
+                    img.style.borderRadius = '4px';
                     
                     // Clear existing content
                     avatarPlaceholder.innerHTML = '';
@@ -125,21 +125,25 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        const stagger = el.classList.contains('skill-category') || el.classList.contains('experience-card') || el.classList.contains('contact-item')
+        const stagger = (!prefersReducedMotion && (el.classList.contains('skill-category') || el.classList.contains('experience-card') || el.classList.contains('contact-item')))
             ? (Array.from(el.parentElement.children).indexOf(el) * 0.06)
             : 0;
-        const delay = prefersReducedMotion ? 0 : stagger;
-        el.style.transitionDelay = `${delay}s`;
+        el.style.transitionDelay = `${stagger}s`;
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
     });
 }, observerOptions);
 
-// Observe sections and cards (hero excluded; entrance handled by CSS)
-document.querySelectorAll('section:not(#home) .section-title, section:not(#home) .about-content, .skill-category, .experience-card, .contact-item, .mobile-apps-title, .hobby-system-content').forEach(el => {
+const scrollRevealSelector = 'section:not(#home) .section-eyebrow, section:not(#home) .section-title, section:not(#home) .about-content, .skill-category, .experience-card, .contact-item, .mobile-apps-title, .hobby-system-content, .documents-list';
+document.querySelectorAll(scrollRevealSelector).forEach((el) => {
+    if (prefersReducedMotion) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        return;
+    }
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
