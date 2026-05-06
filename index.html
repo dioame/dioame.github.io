@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Portfolio - Full Stack Developer specializing in API-based systems, Laravel, React, Vue, and cloud infrastructure">
+    <meta name="description" content="Portfolio of Dioame Jade — full-stack developer focused on API-first backends, integrations, cloud, and AI-assisted delivery. Open to freelance and project work.">
     <meta name="theme-color" content="#0a2624">
-    <title>Dioame Jade - Full Stack Developer</title>
+    <title>Dioame Jade — Full-stack developer · Portfolio</title>
+    <link rel="preload" href="images/profile.png" as="image" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -19,22 +20,27 @@
         <div class="container">
             <div class="nav-header">
                 <div class="nav-brand">Dioame</div>
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-cluster" aria-label="Open navigation menu">
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
                 </button>
             </div>
+            <div class="nav-cluster" id="nav-cluster">
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#hobby-system">Hobby</a></li>
-                <li><a href="#documents">Documents</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#experience">Capabilities</a></li>
+                <li><a href="#hobby-system">Labs</a></li>
+                <li><a href="#documents">Docs</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="resume.html" class="nav-link-outline">Resume</a>
+                <a href="#contact" class="nav-link-primary">Contact</a>
+            </div>
+            </div>
         </div>
     </nav>
 
@@ -87,32 +93,98 @@
                         </svg>
                     </div>
                     <div class="avatar-placeholder">
-                        <img src="images/profile.png" alt="Dioame Jade">
+                        <img src="images/profile.png" alt="Dioame Jade" width="200" height="240" decoding="async" fetchpriority="high">
                         <p class="avatar-hint">Add your photo here</p>
                     </div>
                 </div>
                 <div class="hero-text">
-                    <p class="hero-eyebrow">Independent studio · Remote-friendly · API-first delivery</p>
-                    <h1 class="hero-title"><span class="hero-title-line">Dioame</span> <span class="hero-title-accent">Jade</span></h1>
-                    <p class="subtitle">Full Stack Developer / Prompt Engineer</p>
+                    <p class="hero-eyebrow">
+                        <span class="hero-live-dot" aria-hidden="true"></span>
+                        Portfolio · Remote-friendly · API-first delivery
+                    </p>
+                     <p class="subtitle hero-lead-name"><span class="hero-lead-accent">Dioame Jade</span> 
+                        <br> Full-stack engineer &amp; prompt engineer</p>
+                    <p class="description">Self-employed developer</p>
                     <div class="hero-stats" role="list" aria-label="Highlights">
-                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">7+</span><span class="hero-stat-label">Years building</span></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">7+</span><span class="hero-stat-label">Years experience</span></div>
                         <div class="hero-stat-divider" aria-hidden="true"></div>
-                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">API</span><span class="hero-stat-label">Systems core</span></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">API</span><span class="hero-stat-label">Systems</span></div>
                         <div class="hero-stat-divider" aria-hidden="true"></div>
-                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">AI</span><span class="hero-stat-label">Integrated workflows</span></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">AI</span><span class="hero-stat-label">Workflow</span></div>
                     </div>
-                    <p class="description">Self-employed developer crafting robust, API-based backends and scalable applications—with disciplined architecture and thoughtful interfaces.</p>
                     <div class="hero-badges">
-                        <span class="badge">Self-Employed</span>
-                        <span class="badge">API Specialist</span>
+                        <span class="badge">Fractional / project</span>
+                        <span class="badge">API &amp; integrations</span>
+                        <span class="badge">Cloud &amp; CI/CD</span>
                     </div>
-                    <div class="hero-actions">
-                        <a href="resume.html" class="btn btn-primary">View resume</a>
-                        <a href="#contact" class="btn btn-ghost">Schedule a conversation</a>
-                    </div>
-                    <p class="hero-prompt-highlight">Crafted with AI-assisted development</p>
+                    <p class="hero-prompt-highlight" id="hero-prompt-highlight">I now use AI-assisted tools daily, same standards, faster development.</p>
                 </div>
+                <div class="hero-mockup" aria-hidden="true">
+                    <div class="hero-mockup-window">
+                        <div class="hero-mockup-chrome">
+                            <span class="hero-mockup-dot"></span><span class="hero-mockup-dot"></span><span class="hero-mockup-dot"></span>
+                            <span class="hero-mockup-url">api.studio.dioame · v1</span>
+                        </div>
+                        <div class="hero-mockup-body">
+                            <div class="hero-mockup-main">
+                                <p class="hero-mockup-label">Live terminal</p>
+                                <pre class="hero-mockup-code hero-mockup-code--terminal"><code class="hero-code-terminal" id="hero-code-terminal"></code>
+                                    <!-- <span class="hero-code-cursor" aria-hidden="true"></span> -->
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-trust">
+                <p class="hero-trust-label">Stacks &amp; platforms I use</p>
+                <ul class="hero-trust-list">
+                    <li>Laravel</li>
+                    <li>AWS</li>
+                    <li>React / Vue</li>
+                    <li>OpenAI</li>
+                    <li>Docker</li>
+                    <li>FlutterFlow</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="saas-solutions">
+        <div class="container">
+            <p class="section-eyebrow">Services</p>
+            <h2 class="section-title section-title-left">How I usually collaborate</h2>
+            <p class="saas-lead">Three ways I typically help—pick what fits your roadmap. You work directly with me from discovery through handoff.</p>
+            <div class="saas-grid">
+                <article class="saas-card">
+                    <div class="saas-card-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Architecture &amp; integrations</h3>
+                    <p>API design, auth patterns (OAuth2 / Passport), third-party services, payment rails, and AI endpoints—documented so you can own and extend them without guesswork.</p>
+                    <ul class="saas-card-list">
+                        <li>Technical spikes &amp; RFCs</li>
+                        <li>Webhook &amp; realtime flows</li>
+                    </ul>
+                </article>
+                <article class="saas-card saas-card--featured">
+                    <span class="saas-card-badge">Most requested</span>
+                    <div class="saas-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Build &amp; launch</h3>
+                    <p>I deliver end-to-end backends and supporting web surfaces—with CI/CD, environments, and sensible observability hooks.</p>
+                    <ul class="saas-card-list">
+                        <li>Laravel / Node / Django</li>
+                        <li>AWS &amp; containers</li>
+                    </ul>
+                </article>
+                <article class="saas-card">
+                    <div class="saas-card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Stabilize &amp; scale</h3>
+                    <p>I help with hardening passes, performance tuning, and incremental features on live products—especially API-heavy and mobile-backed systems.</p>
+                    <ul class="saas-card-list">
+                        <li>Incident-minded reviews</li>
+                        <li>Cost-aware cloud tuning</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -155,8 +227,8 @@
             </svg>
         </div>
         <div class="container">
-            <p class="section-eyebrow">Profile</p>
-            <h2 class="section-title">About</h2>
+            <p class="section-eyebrow">Why Dioame</p>
+            <h2 class="section-title">I sweat the details so releases stay boring—in a good way</h2>
             <div class="about-content">
                 <p>I'm a passionate full-stack developer with over 7 years of experience in web and mobile development. I specialize in creating API-based backend systems and have built numerous scalable applications throughout my career.</p>
                 <p>Currently, I'm engaged in AI-assisted coding and developing mobile applications using FlutterFlow with API-based backends. I have experience in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs.</p>
@@ -198,8 +270,8 @@
             </svg>
         </div>
         <div class="container">
-            <p class="section-eyebrow section-eyebrow--on-dark">Capabilities</p>
-            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-eyebrow section-eyebrow--on-dark">Skills</p>
+            <h2 class="section-title">Technical stack</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Core Technologies</h3>
@@ -319,8 +391,8 @@
             </svg>
         </div>
         <div class="container">
-            <p class="section-eyebrow">Practice areas</p>
-            <h2 class="section-title">Experience & Expertise</h2>
+            <p class="section-eyebrow">Experience</p>
+            <h2 class="section-title">What I bring to a project</h2>
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
@@ -418,10 +490,10 @@
             </svg>
         </div>
         <div class="container">
-            <p class="section-eyebrow section-eyebrow--on-dark">Side builds</p>
-            <h2 class="section-title">Prompt-Based Hobby System</h2>
+            <p class="section-eyebrow section-eyebrow--on-dark">Labs</p>
+            <h2 class="section-title">Side projects &amp; experiments</h2>
             <div class="hobby-system-content">
-                <p class="hobby-system-intro">Built with AI-assisted development — side projects and hobby apps.</p>
+                <p class="hobby-system-intro">Prompt-led builds I ship in my spare time—mostly AI-assisted—and link here for fun.</p>
                 <div class="hobby-projects-inline" aria-label="Hobby projects quick links">
                     <a href="http://tabulatorapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="DSWD KORAMBUSAN 2026"><i class="fas fa-trophy" aria-hidden="true"></i><span class="sr-only">DSWD KORAMBUSAN 2026</span></a>
                     <a href="https://greetingsapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-icon" title="Awesome Greetings By Dioame"><i class="fas fa-gift" aria-hidden="true"></i><span class="sr-only">Awesome Greetings By Dioame</span></a>
@@ -454,6 +526,60 @@
         </div>
     </section>
 
+    <!-- JavBis — Laravel accounting & financial management (separate from prompt-based hobby builds) -->
+    <section id="javbis" class="javbis-app">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--javbis-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="javbis-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.12)" />
+                        <stop offset="100%" stop-color="rgba(15,23,42,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#javbis-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--javbis-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="javbis-vgrad-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.07)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#javbis-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow">Laravel · Accounting &amp; financial management</p>
+            <h2 class="section-title">JavBis</h2>
+            <div class="javbis-app-content">
+                <p class="javbis-app-intro"><strong>Accounting that stays in balance.</strong> JavBis brings chart of accounts, cash flow, journal entry vouchers (JEV) with line-level detail, cash receipts and disbursements, bank accounts, payees, customers, and company context into one clear, audit-friendly system—with cash and non-cash reporting from the same ledger. This product is built on Laravel and hosted on Laravel Cloud; it sits apart from the prompt-based hobby experiments above.</p>
+                <ul class="javbis-points">
+                    <li><strong>Structure your books</strong> — account types, groups, and chart accounts so every posting lands in the right bucket.</li>
+                    <li><strong>Record &amp; trace activity</strong> — vouchers, lines, banks, and counterparties stay linked for fast review and defensible month-end.</li>
+                    <li><strong>Report with confidence</strong> — roll cash flow by period and generate cash and non-cash reports from structured inputs.</li>
+                </ul>
+                <p class="javbis-modules-label">Core areas reflected in the app</p>
+                <div class="javbis-modules" aria-label="JavBis core modules and entities">
+                    <span class="javbis-module-tag">ChartAccount</span>
+                    <span class="javbis-module-tag">CashFlow</span>
+                    <span class="javbis-module-tag">Jev &amp; JevLine</span>
+                    <span class="javbis-module-tag">CashReceipt</span>
+                    <span class="javbis-module-tag">CashDisbursement</span>
+                    <span class="javbis-module-tag">BankAccount</span>
+                    <span class="javbis-module-tag">Payee</span>
+                    <span class="javbis-module-tag">Customer</span>
+                    <span class="javbis-module-tag">CompanyInformation</span>
+                </div>
+                <p class="javbis-team-note">I collaborate on JavBis with <strong>Javo Ancla</strong> — reach us through the live app (contact / team).</p>
+                <a href="https://javbis-master-tg0c6c.free.laravel.cloud/" target="_blank" rel="noopener noreferrer" class="javbis-app-cta">
+                    <span class="javbis-app-cta-icon"><i class="fab fa-laravel" aria-hidden="true"></i></span>
+                    <span class="javbis-app-cta-text">Open JavBis</span>
+                    <span class="javbis-app-cta-arrow"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Documents Section -->
     <section id="documents" class="documents">
         <div class="section-vector-bg" aria-hidden="true">
@@ -477,8 +603,8 @@
             </svg>
         </div>
         <div class="container">
-            <p class="section-eyebrow">Records</p>
-            <h2 class="section-title">Documents</h2>
+            <p class="section-eyebrow">Downloads</p>
+            <h2 class="section-title">Resume &amp; credentials</h2>
             <div class="documents-list">
                 <a href="resume.html" class="documents-item">
                     <span class="documents-icon"><i class="fas fa-file-alt"></i></span>
@@ -542,9 +668,9 @@
         </div>
         <div class="container">
             <p class="section-eyebrow section-eyebrow--on-dark">Contact</p>
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Say hello</h2>
             <div class="contact-content">
-                <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Please message first before calling thank you.</p>
+                <p class="contact-intro">Tell me about your API, product surface, or integration roadmap. I typically reply within one business day. Please message before calling—thank you.</p>
                 <div class="contact-methods">
                     <a href="mailto:dioamejade.online@gmail.com" class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -624,11 +750,43 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-grid">
+            <div class="footer-brand-block">
+                <p class="footer-logo">Dioame</p>
+                <p class="footer-tagline">Full-stack portfolio — APIs, integrations, and cloud delivery.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Portfolio</p>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Stack</a></li>
+                    <li><a href="#experience">Capabilities</a></li>
+                    <li><a href="#javbis">JavBis</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Site</p>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Connect</p>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:dioamejade.online@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
             <p>&copy; 2026 Dioame Jade. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
