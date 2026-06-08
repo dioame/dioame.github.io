@@ -167,7 +167,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        const stagger = (!prefersReducedMotion && (el.classList.contains('skill-category') || el.classList.contains('experience-card') || el.classList.contains('contact-item')))
+        const stagger = (!prefersReducedMotion && (el.classList.contains('skill-category') || el.classList.contains('experience-card') || el.classList.contains('contact-channel-card') || el.classList.contains('mobile-app-card') || el.classList.contains('hobby-project-card')))
             ? (Array.from(el.parentElement.children).indexOf(el) * 0.06)
             : 0;
         el.style.transitionDelay = `${stagger}s`;
@@ -176,7 +176,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-const scrollRevealSelector = 'section:not(#home) .section-eyebrow, section:not(#home) .section-title, section:not(#home) .about-content, .saas-lead, .saas-card, .skill-category, .experience-card, .contact-item, .mobile-apps-title, .hobby-system-content, .javbis-app-content, .documents-list';
+const scrollRevealSelector = 'section:not(#home) .section-eyebrow, section:not(#home) .section-title, section:not(#home) .about-content, .saas-lead, .saas-card, .skill-category, .experience-card, .contact-panel, .contact-channel-card, .mobile-app-card, .hobby-system-intro, .hobby-project-card, .javbis-showcase, .javbis-feature-card, .documents-list';
 document.querySelectorAll(scrollRevealSelector).forEach((el) => {
     if (prefersReducedMotion) {
         el.style.opacity = '1';
