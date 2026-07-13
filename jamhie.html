@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Jamhie: Daily Inspiration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            /* Prevent scrolling completely */
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 50%, #e0f2fe 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 2rem;
+            max-width: 500px;
+            width: 90%;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        .title-text {
+            font-family: 'Dancing Script', cursive;
+            color: #db2777;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #quote-container {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .quote-text {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+            font-weight: 500;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .author-text {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .btn-inspire {
+            margin-top: 2rem;
+            background: #db2777;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+        }
+
+        .btn-inspire:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(219, 39, 119, 0.4);
+            background: #be185d;
+        }
+
+        .btn-inspire:active {
+            transform: translateY(0);
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        /* Decorative Floating Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(40px);
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            from { transform: translate(0, 0); }
+            to { transform: translate(20px, 40px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Decoration -->
+    <div class="circle w-64 h-64 bg-pink-200 top-10 left-10" style="animation-delay: 0s;"></div>
+    <div class="circle w-96 h-96 bg-blue-100 bottom-10 right-10" style="animation-delay: -2s;"></div>
+    <div class="circle w-48 h-48 bg-purple-200 bottom-1/4 left-1/3" style="animation-delay: -5s;"></div>
+
+    <div class="glass-card">
+        <h1 class="title-text">To Jamhie</h1>
+        
+        <div id="quote-container">
+            <p id="quote" class="quote-text">"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+            <p id="author" class="author-text">— Chinese Proverb</p>
+        </div>
+
+        <button class="btn-inspire" onclick="generateQuote()">
+            New Inspiration
+        </button>
+    </div>
+
+    <script>
+        const quotes = [
+            { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+            { text: "Everything you've ever wanted is on the other side of fear.", author: "George Addair" },
+            { text: "Your light is a beacon for those who are lost in the dark.", author: "Unknown" },
+            { text: "Hardships often prepare ordinary people for an extraordinary destiny.", author: "C.S. Lewis" },
+            { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+            { text: "Do not let what you cannot do interfere with what you can do.", author: "John Wooden" },
+            { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+            { text: "Kindness is a gift everyone can afford to give.", author: "Unknown" },
+            { text: "Stars can't shine without darkness.", author: "Unknown" },
+            { text: "Be the change that you wish to see in the world.", author: "Mahatma Gandhi" },
+            { text: "You are enough just as you are.", author: "Meghan Markle" },
+            { text: "Happiness is not something ready made. It comes from your own actions.", author: "Dalai Lama" },
+            { text: "Every day provides its own gifts.", author: "Marcus Aurelius" },
+            { text: "It is during our darkest moments that we must focus to see the light.", author: "Aristotle" },
+            { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+            { text: "In the middle of difficulty lies opportunity.", author: "Albert Einstein" },
+            { text: "What lies behind us and what lies before us are tiny matters compared to what lies within us.", author: "Ralph Waldo Emerson" },
+            { text: "You miss 100% of the shots you don't take.", author: "Wayne Gretzky" },
+            { text: "Whether you think you can or you think you can't, you're right.", author: "Henry Ford" },
+            { text: "The only impossible journey is the one you never begin.", author: "Tony Robbins" },
+            { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+            { text: "Act as if what you do makes a difference. It does.", author: "William James" },
+            { text: "You are never too old to set another goal or to dream a new dream.", author: "C.S. Lewis" },
+            { text: "The only person you are destined to become is the person you decide to be.", author: "Ralph Waldo Emerson" },
+            { text: "Go confidently in the direction of your dreams. Live the life you have imagined.", author: "Henry David Thoreau" },
+            { text: "When you have a dream, you've got to grab it and never let go.", author: "Carol Burnett" },
+            { text: "Nothing is impossible. The word itself says 'I'm possible!'", author: "Audrey Hepburn" },
+            { text: "There is nothing in a caterpillar that tells you it's going to be a butterfly.", author: "Richard Buckminster Fuller" },
+            { text: "Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.", author: "Roy T. Bennett" },
+            { text: "I learned that courage was not the absence of fear, but the triumph over it.", author: "Nelson Mandela" },
+            { text: "We need to accept that we won't always make the right decisions, that we'll screw up royally sometimes.", author: "Meryl Streep" },
+            { text: "Life is 10% what happens to you and 90% how you react to it.", author: "Charles R. Swindoll" },
+            { text: "You don't have to be great to start, but you have to start to be great.", author: "Zig Ziglar" },
+            { text: "The best revenge is massive success.", author: "Frank Sinatra" },
+            { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+            { text: "Everything you can imagine is real.", author: "Pablo Picasso" },
+            { text: "Hold the vision, trust the process.", author: "Unknown" },
+            { text: "The only way to achieve the impossible is to believe it is possible.", author: "Charles Kingsleigh" },
+            { text: "What you get by achieving your goals is not as important as what you become by achieving your goals.", author: "Zig Ziglar" },
+            { text: "Believe in yourself, take on your challenges, dig deep within yourself to conquer fears.", author: "Chantal Sutherland" },
+            { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { text: "Don't be afraid to give up the good to go for the great.", author: "John D. Rockefeller" },
+            { text: "If you are working on something that you really care about, you don't have to be pushed. The vision pulls you.", author: "Steve Jobs" },
+            { text: "People who are crazy enough to think they can change the world are the ones who do.", author: "Rob Siltanen" },
+            { text: "We may encounter many defeats but we must not be defeated.", author: "Maya Angelou" },
+            { text: "Knowing is not enough; we must apply. Wishing is not enough; we must do.", author: "Johann Wolfgang von Goethe" },
+            { text: "Whether you think you can or you think you can't, you're right.", author: "Henry Ford" },
+            { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
+            { text: "Creativity is intelligence having fun.", author: "Albert Einstein" },
+            { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+            { text: "If opportunity doesn't knock, build a door.", author: "Milton Berle" },
+            { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+            { text: "The future depends on what you do today.", author: "Mahatma Gandhi" },
+            { text: "It always seems impossible until it's done.", author: "Nelson Mandela" },
+            { text: "You are what you do, not what you say you'll do.", author: "Carl Jung" },
+            { text: "Fall seven times and stand up eight.", author: "Japanese Proverb" },
+            { text: "Dream big and dare to fail.", author: "Norman Vaughan" },
+            { text: "The only place where success comes before work is in the dictionary.", author: "Vidal Sassoon" },
+            { text: "Small steps every day lead to big results.", author: "Unknown" },
+            { text: "You don't have to see the whole staircase, just take the first step.", author: "Martin Luther King Jr." },
+            { text: "Be so good they can't ignore you.", author: "Steve Martin" },
+            { text: "The struggle you're in today is developing the strength you need for tomorrow.", author: "Robert Tew" },
+            { text: "Great things never come from comfort zones.", author: "Unknown" },
+            { text: "Dream it. Wish it. Do it.", author: "Unknown" },
+            { text: "Success doesn't come to you, you go to it.", author: "Marva Collins" },
+            { text: "The harder you work for something, the greater you'll feel when you achieve it.", author: "Unknown" },
+            { text: "Don't downgrade your dream just to fit your reality. Upgrade your conviction to match your destiny.", author: "Stuart Scott" },
+            { text: "You are never too small to make a difference.", author: "Greta Thunberg" },
+            { text: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington" },
+            { text: "The only bad workout is the one that didn't happen.", author: "Unknown" },
+            { text: "Today is your opportunity to build the tomorrow you want.", author: "Ken Poirot" },
+            { text: "When you feel like quitting, think about why you started.", author: "Unknown" },
+            { text: "Your limitation—it's only your imagination.", author: "Unknown" },
+            { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
+            { text: "Sometimes later becomes never. Do it now.", author: "Unknown" },
+            { text: "Great things never come from comfort zones.", author: "Unknown" },
+            { text: "Dream bigger. Do bigger.", author: "Unknown" },
+            { text: "Success is the sum of small efforts repeated day in and day out.", author: "Robert Collier" },
+            { text: "Don't stop when you're tired. Stop when you're done.", author: "Unknown" },
+            { text: "Wake up with determination. Go to bed with satisfaction.", author: "Unknown" },
+            { text: "Do something today that your future self will thank you for.", author: "Unknown" },
+            { text: "Little things make big days.", author: "Unknown" },
+            { text: "It's going to be hard, but hard does not mean impossible.", author: "Unknown" },
+            { text: "Don't wait for opportunity. Create it.", author: "Unknown" },
+            { text: "Sometimes we're tested not to show our weaknesses, but to discover our strengths.", author: "Unknown" },
+            { text: "The key to success is to focus on goals, not obstacles.", author: "Unknown" },
+            { text: "Dream it. Believe it. Build it.", author: "Unknown" },
+            { text: "You didn't come this far to only come this far.", author: "Unknown" },
+            { text: "Work hard in silence, let your success be the noise.", author: "Frank Ocean" },
+            { text: "The best view comes after the hardest climb.", author: "Unknown" },
+            { text: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe" },
+            { text: "Hustle in silence and let your success make the noise.", author: "Unknown" },
+            { text: "If it doesn't challenge you, it won't change you.", author: "Fred DeVito" },
+            { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+            { text: "Try not to become a person of success, but rather try to become a person of value.", author: "Albert Einstein" },
+            { text: "It's not whether you get knocked down, it's whether you get up.", author: "Vince Lombardi" },
+            { text: "Your time is limited, don't waste it living someone else's life.", author: "Steve Jobs" },
+            { text: "The greatest glory in living lies not in never falling, but in rising every time we fall.", author: "Nelson Mandela" },
+            { text: "Spread love everywhere you go.", author: "Mother Teresa" },
+            { text: "The only thing we have to fear is fear itself.", author: "Franklin D. Roosevelt" },
+            { text: "Darkness cannot drive out darkness: only light can do that.", author: "Martin Luther King Jr." },
+            { text: "Well done is better than well said.", author: "Benjamin Franklin" },
+            { text: "The best and most beautiful things in the world cannot be seen or even touched—they must be felt with the heart.", author: "Helen Keller" },
+            { text: "It is our choices that show what we truly are, far more than our abilities.", author: "J.K. Rowling" },
+            { text: "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.", author: "Dr. Seuss" },
+            { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+            { text: "The purpose of our lives is to be happy.", author: "Dalai Lama" },
+            { text: "Get busy living or get busy dying.", author: "Stephen King" },
+            { text: "You only live once, but if you do it right, once is enough.", author: "Mae West" },
+            { text: "Many of life's failures are people who did not realize how close they were to success when they gave up.", author: "Thomas A. Edison" },
+            { text: "If you want to live a happy life, tie it to a goal, not to people or things.", author: "Albert Einstein" },
+            { text: "Never let the fear of striking out keep you from playing the game.", author: "Babe Ruth" },
+            { text: "Life is either a daring adventure or nothing at all.", author: "Helen Keller" },
+            { text: "The mind is everything. What you think you become.", author: "Buddha" },
+            { text: "The best time for new beginnings is now.", author: "Unknown" },
+            { text: "Every moment is a fresh beginning.", author: "T.S. Eliot" },
+            { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+            { text: "You are braver than you believe, stronger than you seem, and smarter than you think.", author: "A.A. Milne" }
+        ];
+
+        function generateQuote() {
+            const quoteEl = document.getElementById('quote');
+            const authorEl = document.getElementById('author');
+            quoteEl.classList.add('fade-out');
+            authorEl.classList.add('fade-out');
+            setTimeout(() => {
+                const pick = quotes[Math.floor(Math.random() * quotes.length)];
+                quoteEl.textContent = `"${pick.text}"`;
+                authorEl.textContent = `— ${pick.author}`;
+                quoteEl.classList.remove('fade-out');
+                authorEl.classList.remove('fade-out');
+            }, 400);
+        }
+
+        window.onload = generateQuote;
+    </script>
+</body>
+</html>
