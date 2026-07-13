@@ -1,1 +1,832 @@
+<<<<<<< Updated upstream
 <h1>Hello, World!</h1>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Dioame Jade — full-stack developer focused on API-first backends, integrations, cloud, and AI-assisted delivery. Open to freelance and project work.">
+    <meta name="theme-color" content="#0a2624">
+    <title>Dioame Jade — Full-stack developer · Portfolio</title>
+    <link rel="preload" href="images/profile.png" as="image" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Primary">
+        <div class="container">
+            <div class="nav-header">
+                <div class="nav-brand">Dioame</div>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-cluster" aria-label="Open navigation menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+            <div class="nav-cluster" id="nav-cluster">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#experience">Capabilities</a></li>
+                <li><a href="#hobby-system">Labs</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="resume.html" class="nav-link-outline">Resume</a>
+                <a href="#contact" class="nav-link-primary">Contact</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <!-- Hero Section with Vector Animation -->
+    <section id="home" class="hero">
+        <!-- Animated vector background -->
+        <div class="hero-bg" aria-hidden="true">
+            <svg class="hero-blob hero-blob-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blob1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:rgba(255,255,255,0.25)" />
+                        <stop offset="100%" style="stop-color:rgba(255,255,255,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#blob1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="hero-blob hero-blob-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blob2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgba(255,255,255,0.15)" />
+                        <stop offset="100%" style="stop-color:rgba(255,255,255,0.02)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#blob2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="hero-blob hero-blob-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blob3" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:rgba(255,255,255,0.2)" />
+                        <stop offset="100%" style="stop-color:rgba(255,255,255,0)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#blob3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+            <div class="hero-grid"></div>
+            <div class="hero-dots"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <div class="avatar-frame-corner avatar-frame-corner--tl" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--tr" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--bl" aria-hidden="true"></div>
+                    <div class="avatar-frame-corner avatar-frame-corner--br" aria-hidden="true"></div>
+                    <div class="avatar-ring">
+                        <svg class="avatar-ring-svg" viewBox="0 0 220 220" aria-hidden="true">
+                            <circle class="avatar-ring-circle" cx="110" cy="110" r="100" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="4 8" />
+                            <circle class="avatar-ring-circle avatar-ring-circle-2" cx="110" cy="110" r="108" fill="none" stroke="rgba(201,169,98,0.35)" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div class="avatar-placeholder">
+                        <img src="images/profile.png" alt="Dioame Jade" width="200" height="240" decoding="async" fetchpriority="high">
+                        <p class="avatar-hint">Add your photo here</p>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <p class="hero-eyebrow">
+                        <span class="hero-live-dot" aria-hidden="true"></span>
+                        Portfolio · Remote-friendly · API-first delivery
+                    </p>
+                     <p class="subtitle hero-lead-name"><span class="hero-lead-accent">Dioame Jade</span> 
+                        <br> Full-stack engineer &amp; prompt engineer</p>
+                    <p class="description">Self-employed developer</p>
+                    <div class="hero-stats" role="list" aria-label="Highlights">
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">7+</span><span class="hero-stat-label">Years experience</span></div>
+                        <div class="hero-stat-divider" aria-hidden="true"></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">API</span><span class="hero-stat-label">Systems</span></div>
+                        <div class="hero-stat-divider" aria-hidden="true"></div>
+                        <div class="hero-stat" role="listitem"><span class="hero-stat-value">AI</span><span class="hero-stat-label">Workflow</span></div>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge">Fractional / project</span>
+                        <span class="badge">API &amp; integrations</span>
+                        <span class="badge">Cloud &amp; CI/CD</span>
+                    </div>
+                    <p class="hero-prompt-highlight" id="hero-prompt-highlight">I now use AI-assisted tools daily, same standards, faster development.</p>
+                </div>
+                <div class="hero-mockup" aria-hidden="true">
+                    <div class="hero-mockup-window">
+                        <div class="hero-mockup-chrome">
+                            <span class="hero-mockup-dot"></span><span class="hero-mockup-dot"></span><span class="hero-mockup-dot"></span>
+                            <span class="hero-mockup-url">api.studio.dioame · v1</span>
+                        </div>
+                        <div class="hero-mockup-body">
+                            <div class="hero-mockup-main">
+                                <p class="hero-mockup-label">Live terminal</p>
+                                <pre class="hero-mockup-code hero-mockup-code--terminal"><code class="hero-code-terminal" id="hero-code-terminal"></code>
+                                    <!-- <span class="hero-code-cursor" aria-hidden="true"></span> -->
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-trust">
+                <p class="hero-trust-label">Stacks &amp; platforms I use</p>
+                <ul class="hero-trust-list">
+                    <li>Laravel</li>
+                    <li>AWS</li>
+                    <li>React / Vue</li>
+                    <li>OpenAI</li>
+                    <li>Docker</li>
+                    <li>FlutterFlow</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="saas-solutions">
+        <div class="container">
+            <p class="section-eyebrow">Services</p>
+            <h2 class="section-title section-title-left">How I usually collaborate</h2>
+            <p class="saas-lead">Three ways I typically help—pick what fits your roadmap. You work directly with me from discovery through handoff.</p>
+            <div class="saas-grid">
+                <article class="saas-card">
+                    <div class="saas-card-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Architecture &amp; integrations</h3>
+                    <p>API design, auth patterns (OAuth2 / Passport), third-party services, payment rails, and AI endpoints—documented so you can own and extend them without guesswork.</p>
+                    <ul class="saas-card-list">
+                        <li>Technical spikes &amp; RFCs</li>
+                        <li>Webhook &amp; realtime flows</li>
+                    </ul>
+                </article>
+                <article class="saas-card saas-card--featured">
+                    <span class="saas-card-badge">Most requested</span>
+                    <div class="saas-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Build &amp; launch</h3>
+                    <p>I deliver end-to-end backends and supporting web surfaces—with CI/CD, environments, and sensible observability hooks.</p>
+                    <ul class="saas-card-list">
+                        <li>Laravel / Node / Django</li>
+                        <li>AWS &amp; containers</li>
+                    </ul>
+                </article>
+                <article class="saas-card">
+                    <div class="saas-card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Stabilize &amp; scale</h3>
+                    <p>I help with hardening passes, performance tuning, and incremental features on live products—especially API-heavy and mobile-backed systems.</p>
+                    <ul class="saas-card-list">
+                        <li>Incident-minded reviews</li>
+                        <li>Cost-aware cloud tuning</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--about-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.14)" />
+                        <stop offset="100%" stop-color="rgba(14,165,233,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--about-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,23,42,0.06)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--about-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="about-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.08)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#about-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="section-accent about-accent" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <path class="accent-path" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 4" d="M20 60 Q60 20 100 60" />
+                <circle class="accent-dot" cx="60" cy="60" r="4" fill="var(--primary-color)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow">Why Dioame</p>
+            <h2 class="section-title">I sweat the details so releases stay boring—in a good way</h2>
+            <div class="about-content">
+                <p>I'm a passionate full-stack developer with over 7 years of experience in web and mobile development. I specialize in creating API-based backend systems and have built numerous scalable applications throughout my career.</p>
+                <p>Currently, I'm engaged in AI-assisted coding and developing mobile applications using FlutterFlow with API-based backends. I have experience in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-bg-vectors" aria-hidden="true">
+            <div class="skill-vector skill-vector-1"></div>
+            <div class="skill-vector skill-vector-2"></div>
+            <svg class="section-blob section-blob--skills-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.12)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--skills-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.18)" />
+                        <stop offset="100%" stop-color="rgba(56,189,248,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--skills-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skills-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#skills-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Skills</p>
+            <h2 class="section-title">Technical stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Core Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Django</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FlutterFlow</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & CI/CD</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab Runners</span>
+                        <span class="skill-tag">Gitflow</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Server & Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">Caddy Server</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">AWS Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AWS & Cloud Services</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">Amazon Bedrock</span>
+                        <span class="skill-tag">AWS Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & APIs</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Google Gemini</span>
+                        <span class="skill-tag">Amazon Bedrock</span>
+                        <span class="skill-tag">AI Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category skill-category-highlight">
+                    <h3>Prompt Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">Antigravity</span>
+                        <span class="skill-tag">Codex</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Payment Integration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PayMongo</span>
+                        <span class="skill-tag">Stripe</span>
+                        <span class="skill-tag">AltPayNet</span>
+                        <span class="skill-tag">Third-party APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-flow section-flow--exp" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-flow-grad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.2)" />
+                        <stop offset="50%" stop-color="rgba(14,165,233,0.12)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.15)" />
+                    </linearGradient>
+                </defs>
+                <path class="section-flow-path section-flow-path--a" fill="none" stroke="url(#exp-flow-grad)" stroke-width="1.25" d="M0,200 C280,60 520,280 780,140 C920,70 1040,220 1200,100" />
+                <path class="section-flow-path section-flow-path--b" fill="none" stroke="rgba(15,23,42,0.08)" stroke-width="1" d="M0,120 C340,220 560,40 880,180 C1000,240 1120,80 1200,160" />
+            </svg>
+            <svg class="section-blob section-blob--exp-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,23,42,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#exp-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--exp-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="exp-vgrad-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.07)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.06)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#exp-vgrad-2)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow">Experience</p>
+            <h2 class="section-title">What I bring to a project</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Self-Employed Developer</h3>
+                    <p>7+ years of professional development experience</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>API-Based Systems</h3>
+                    <p>Extensive experience building robust, scalable API backends for various applications</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile App Development</h3>
+                    <p>Developing mobile applications using FlutterFlow with API-based backend integration</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>CI/CD Implementation</h3>
+                    <p>Setting up and managing CI/CD pipelines using Jenkins and GitLab Runners with Gitflow workflow</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Deploying applications on Nginx and Caddy servers, managing AWS EC2 instances and RDS databases</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Integration</h3>
+                    <p>Integrating AI services including Amazon Bedrock, Google Gemini, and OpenAI APIs into applications</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Payment Integration</h3>
+                    <p>Implementing payment gateways with PayMongo, Stripe, and AltPayNet for secure transactions</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>Prompt Engineering</h3>
+                    <p>Daily use of GitHub Copilot, Cursor, Antigravity, and Codex for AI-assisted development and productivity</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>AI-Assisted Coding</h3>
+                    <p>Leveraging AI tools to enhance development workflow and productivity</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-plug"></i></div>
+                    <h3>Socket Integration</h3>
+                    <p>Implementing real-time communication using WebSocket technology for live updates and interactive features</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-broadcast-tower"></i></div>
+                    <h3>Laravel Reverb</h3>
+                    <p>Building real-time applications with Laravel Reverb for WebSocket server functionality and event broadcasting</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-key"></i></div>
+                    <h3>Laravel Passport</h3>
+                    <p>Implementing OAuth2 authentication and API token management using Laravel Passport for secure API access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt-Based Hobby System Section -->
+    <section id="hobby-system" class="hobby-system">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--hobby-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.12)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--hobby-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.16)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--hobby-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hobby-vgrad-3" x1="50%" y1="0%" x2="50%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(56,189,248,0.08)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.03)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#hobby-vgrad-3)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Labs</p>
+            <h2 class="section-title">Side projects &amp; experiments</h2>
+            <div class="hobby-system-content">
+                <p class="hobby-system-intro">Prompt-led builds I ship in my spare time—mostly AI-assisted—and link here for fun.</p>
+                <div class="hobby-projects-grid" aria-label="Hobby projects">
+                    <a href="http://tabulatorapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-card">
+                        <span class="hobby-project-card-icon hobby-project-card-icon--amber" aria-hidden="true"><i class="fas fa-trophy"></i></span>
+                        <span class="hobby-project-card-body">
+                            <span class="hobby-project-card-title">DSWD KORAMBUSAN 2026</span>
+                            <span class="hobby-project-card-desc">Live scoring &amp; rankings for events</span>
+                        </span>
+                        <span class="hobby-project-card-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                    <a href="https://greetingsapp.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-card">
+                        <span class="hobby-project-card-icon hobby-project-card-icon--rose" aria-hidden="true"><i class="fas fa-gift"></i></span>
+                        <span class="hobby-project-card-body">
+                            <span class="hobby-project-card-title">Awesome Greetings By Dioame</span>
+                            <span class="hobby-project-card-desc">Custom digital greeting cards</span>
+                        </span>
+                        <span class="hobby-project-card-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                    <a href="https://myfundtracker-lime.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-card">
+                        <span class="hobby-project-card-icon hobby-project-card-icon--emerald" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                        <span class="hobby-project-card-body">
+                            <span class="hobby-project-card-title">FundTracker Pro</span>
+                            <span class="hobby-project-card-desc">Personal finance &amp; fund tracking</span>
+                        </span>
+                        <span class="hobby-project-card-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                    <a href="https://wampdf.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-project-card">
+                        <span class="hobby-project-card-icon hobby-project-card-icon--sky" aria-hidden="true"><i class="fas fa-file-pdf"></i></span>
+                        <span class="hobby-project-card-body">
+                            <span class="hobby-project-card-title">wampdf</span>
+                            <span class="hobby-project-card-desc">Merge PDFs &amp; images in the browser</span>
+                        </span>
+                        <span class="hobby-project-card-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                    <a href="https://wampos.vercel.app/login" target="_blank" rel="noopener noreferrer" class="hobby-project-card hobby-project-card--featured">
+                        <span class="hobby-project-card-icon hobby-project-card-icon--teal" aria-hidden="true"><i class="fas fa-cash-register"></i></span>
+                        <span class="hobby-project-card-body">
+                            <span class="hobby-project-card-title">WamPOS</span>
+                            <span class="hobby-project-card-desc">Offline grocery point-of-sale</span>
+                        </span>
+                        <span class="hobby-project-card-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavBis — Laravel accounting & financial management (separate from prompt-based hobby builds) -->
+    <section id="javbis" class="javbis-app">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-blob section-blob--javbis-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="javbis-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.12)" />
+                        <stop offset="100%" stop-color="rgba(15,23,42,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#javbis-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--javbis-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="javbis-vgrad-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(14,165,233,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.07)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#javbis-vgrad-2)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow">Laravel · Accounting &amp; financial management</p>
+            <h2 class="section-title">JavBis</h2>
+            <div class="javbis-app-content">
+                <article class="javbis-showcase">
+                    <div class="javbis-showcase-hero">
+                        <div class="javbis-showcase-brand">
+                            <span class="javbis-showcase-logo" aria-hidden="true"><i class="fab fa-laravel"></i></span>
+                            <div class="javbis-showcase-brand-text">
+                                <p class="javbis-showcase-tagline">Accounting that stays in balance.</p>
+                                <p class="javbis-showcase-stack">Laravel · Laravel Cloud</p>
+                            </div>
+                        </div>
+                        <p class="javbis-app-intro">JavBis brings chart of accounts, cash flow, journal entry vouchers (JEV) with line-level detail, cash receipts and disbursements, bank accounts, payees, customers, and company context into one clear, audit-friendly system—with cash and non-cash reporting from the same ledger. Built on Laravel and hosted on Laravel Cloud; it sits apart from the prompt-based hobby experiments above.</p>
+                    </div>
+
+                    <div class="javbis-feature-grid">
+                        <div class="javbis-feature-card">
+                            <span class="javbis-feature-icon" aria-hidden="true"><i class="fas fa-sitemap"></i></span>
+                            <h3 class="javbis-feature-title">Structure your books</h3>
+                            <p class="javbis-feature-desc">Account types, groups, and chart accounts so every posting lands in the right bucket.</p>
+                        </div>
+                        <div class="javbis-feature-card">
+                            <span class="javbis-feature-icon" aria-hidden="true"><i class="fas fa-receipt"></i></span>
+                            <h3 class="javbis-feature-title">Record &amp; trace activity</h3>
+                            <p class="javbis-feature-desc">Vouchers, lines, banks, and counterparties stay linked for fast review and defensible month-end.</p>
+                        </div>
+                        <div class="javbis-feature-card">
+                            <span class="javbis-feature-icon" aria-hidden="true"><i class="fas fa-chart-pie"></i></span>
+                            <h3 class="javbis-feature-title">Report with confidence</h3>
+                            <p class="javbis-feature-desc">Roll cash flow by period and generate cash and non-cash reports from structured inputs.</p>
+                        </div>
+                    </div>
+
+                    <div class="javbis-modules-panel">
+                        <p class="javbis-modules-label">Core areas reflected in the app</p>
+                        <div class="javbis-modules" aria-label="JavBis core modules and entities">
+                            <span class="javbis-module-tag">ChartAccount</span>
+                            <span class="javbis-module-tag">CashFlow</span>
+                            <span class="javbis-module-tag">Jev &amp; JevLine</span>
+                            <span class="javbis-module-tag">CashReceipt</span>
+                            <span class="javbis-module-tag">CashDisbursement</span>
+                            <span class="javbis-module-tag">BankAccount</span>
+                            <span class="javbis-module-tag">Payee</span>
+                            <span class="javbis-module-tag">Customer</span>
+                            <span class="javbis-module-tag">CompanyInformation</span>
+                        </div>
+                    </div>
+
+                    <div class="javbis-showcase-footer">
+                        <p class="javbis-team-note">I collaborate on JavBis with <strong>Javo Ancla, CPA</strong> — reach us through the live app (contact / team).</p>
+                        <a href="https://javbis-master-tg0c6c.free.laravel.cloud/" target="_blank" rel="noopener noreferrer" class="javbis-app-cta">
+                            <span class="javbis-app-cta-icon"><i class="fab fa-laravel" aria-hidden="true"></i></span>
+                            <span class="javbis-app-cta-text">Open JavBis</span>
+                            <span class="javbis-app-cta-arrow"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-vector-bg" aria-hidden="true">
+            <svg class="section-flow section-flow--contact" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-flow-grad" x1="0" y1="1" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.22)" />
+                        <stop offset="100%" stop-color="rgba(56,189,248,0.1)" />
+                    </linearGradient>
+                </defs>
+                <path class="section-flow-path section-flow-path--c" fill="none" stroke="url(#contact-flow-grad)" stroke-width="1.2" d="M0,240 C360,80 720,320 1200,120" />
+            </svg>
+            <svg class="section-blob section-blob--contact-1" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.09)" />
+                        <stop offset="100%" stop-color="rgba(15,118,110,0.14)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-1)" d="M72.2,-72.2C92.5,-51.9,107.4,-26,108.2,0.4C109,26.8,95.7,53.6,75.4,72.4C55.1,91.2,27.6,102,0.2,101.8C-27.2,101.6,-54.4,90.4,-74.7,71.6C-95,52.8,-108.4,26.4,-108.2,0C-108,-26.4,-95.2,-52.8,-74.9,-74.9C-54.6,-97,-27.3,-114.8,-0.6,-114.2C26.1,-113.6,52.2,-94.6,72.2,-72.2Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--contact-2" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(15,118,110,0.12)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-2)" d="M65.3,-65.3C84.2,-46.4,98.1,-23.2,98.8,0.6C99.5,24.4,87,48.8,68.1,68.1C49.2,87.4,24.6,101.6,0.3,101.3C-24,101,-48,86.2,-67.1,66.9C-86.2,47.6,-100.4,23.8,-100.2,0.2C-100,-23.4,-85.8,-46.8,-66.7,-65.7C-47.6,-84.6,-23.8,-99,-0.4,-98.6C23,-98.2,46.4,-84.2,65.3,-65.3Z" transform="translate(200 200)" />
+            </svg>
+            <svg class="section-blob section-blob--contact-3" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="contact-vgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(56,189,248,0.1)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0.04)" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#contact-vgrad-3)" d="M58.2,-58.2C74.4,-42,85.2,-21,85.8,0.5C86.4,22,76.8,44,60.6,60.6C44.4,77.2,22.2,88.4,0,88.4C-22.2,88.4,-44.4,77.2,-60.6,60.6C-76.8,44,-86.4,22,-85.8,0C-85.2,-22,-74.4,-44,-58.2,-58.2C-42,-72.4,-21,-76.2,0,-76.2C21,-76.2,42,-72.4,58.2,-58.2Z" transform="translate(200 200)" />
+            </svg>
+        </div>
+        <div class="container">
+            <p class="section-eyebrow section-eyebrow--on-dark">Contact</p>
+            <h2 class="section-title">Say hello</h2>
+            <div class="contact-content">
+                <p class="contact-intro">Tell me about your API, product surface, or integration roadmap. I typically reply within one business day. Please message before calling—thank you.</p>
+
+                <div class="contact-showcase">
+                    <div class="contact-panel contact-panel--channels">
+                        <div class="contact-panel-header">
+                            <h3 class="contact-subheading">Get in touch</h3>
+                            <p class="contact-panel-note">Direct lines &amp; social profiles</p>
+                        </div>
+                        <div class="contact-channels-grid">
+                            <a href="mailto:dioamejade.online@gmail.com" class="contact-channel-card">
+                                <span class="contact-channel-icon contact-channel-icon--email" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                                <span class="contact-channel-label">Email</span>
+                                <span class="contact-channel-value">dioamejade.online@gmail.com</span>
+                            </a>
+                            <a href="tel:+639467105070" class="contact-channel-card">
+                                <span class="contact-channel-icon contact-channel-icon--phone" aria-hidden="true"><i class="fas fa-phone"></i></span>
+                                <span class="contact-channel-label">Phone</span>
+                                <span class="contact-channel-value">+63 946 710 5070</span>
+                                <span class="contact-channel-note">Please message first before calling.</span>
+                            </a>
+                            <a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                                <span class="contact-channel-icon contact-channel-icon--github" aria-hidden="true"><i class="fab fa-github"></i></span>
+                                <span class="contact-channel-label">GitHub</span>
+                                <span class="contact-channel-value">github.com/dioame</span>
+                                <span class="contact-channel-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                                <span class="contact-channel-icon contact-channel-icon--linkedin" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                                <span class="contact-channel-label">LinkedIn</span>
+                                <span class="contact-channel-value">Connect on LinkedIn</span>
+                                <span class="contact-channel-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://web.facebook.com/dioame.rendon/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                                <span class="contact-channel-icon contact-channel-icon--facebook" aria-hidden="true"><i class="fab fa-facebook"></i></span>
+                                <span class="contact-channel-label">Facebook</span>
+                                <span class="contact-channel-value">dioame.rendon</span>
+                                <span class="contact-channel-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-panel contact-panel--apps">
+                        <div class="contact-panel-header contact-panel-header--apps">
+                            <div>
+                                <h3 class="contact-subheading">Mobile Apps</h3>
+                                <p class="contact-panel-note">DSWD Field Office Caraga · Google Play</p>
+                            </div>
+                            <span class="contact-apps-badge"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+                        </div>
+                        <div class="mobile-apps-grid">
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdcaraga.dswdworkspace&hl=en" target="_blank" rel="noopener noreferrer" class="mobile-app-card mobile-app-card--featured">
+                                <span class="mobile-app-thumb mobile-app-thumb--workspace" aria-hidden="true"><i class="fas fa-table-columns"></i></span>
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">DSWD WorkSPACE</span>
+                                    <span class="mobile-app-desc">My Space, tasks, kanban boards &amp; project discussions via secure Caraga Connect MFA.</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdcaraga.kaagapailokal" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <span class="mobile-app-thumb mobile-app-thumb--kaagapai" aria-hidden="true"><i class="fas fa-microchip"></i></span>
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">Kaagap-AI Lokal</span>
+                                    <span class="mobile-app-desc">Private offline AI assistant — models run on-device, no cloud, no account.</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdcaraga.emotimon" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <span class="mobile-app-thumb mobile-app-thumb--emotimon" aria-hidden="true"><i class="fas fa-heart-pulse"></i></span>
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">EmotiMon</span>
+                                    <span class="mobile-app-desc">Wellness companion — daily mood check-ins, stress quiz &amp; gamified habits.</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdfocrg.paid&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <img class="mobile-app-thumb mobile-app-thumb--image" src="images/apps/paidmobile.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">PAID Mobile</span>
+                                    <span class="mobile-app-desc">Payout documentation for Cash-for-Work</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdfocrg.faithmobile&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <img class="mobile-app-thumb mobile-app-thumb--image" src="images/apps/faithmobile.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">FAITH Mobile</span>
+                                    <span class="mobile-app-desc">Field Acceptance &amp; Inspection Tracking</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdfocrg.dswdmymobile&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <img class="mobile-app-thumb mobile-app-thumb--image" src="images/apps/dswdmymobile.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">DSWD MyMobile</span>
+                                    <span class="mobile-app-desc">Employee service platform for DSWD</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=gov.dswdfocrg.pinpoint&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="mobile-app-card">
+                                <img class="mobile-app-thumb mobile-app-thumb--image" src="images/apps/pinpointmobile.webp" alt="" width="48" height="48" loading="lazy" decoding="async">
+                                <span class="mobile-app-body">
+                                    <span class="mobile-app-title">Pinpoint</span>
+                                    <span class="mobile-app-desc">KALAHI-CIDSS geotagging companion</span>
+                                </span>
+                                <span class="mobile-app-cta" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-block">
+                <p class="footer-logo">Dioame</p>
+                <p class="footer-tagline">Full-stack portfolio — APIs, integrations, and cloud delivery.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Portfolio</p>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Stack</a></li>
+                    <li><a href="#experience">Capabilities</a></li>
+                    <li><a href="#javbis">JavBis</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Site</p>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-heading">Connect</p>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/dioame" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:dioamejade.online@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Dioame Jade. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+>>>>>>> Stashed changes
