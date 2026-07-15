@@ -3,7 +3,7 @@ import { buildCompactPortfolioContext } from "./knowledge";
 const MODEL = "gemini-3.5-flash";
 
 const SYSTEM_RULES = `Portfolio assistant for Dioame Jade.
-Rules: answer in 1–3 short sentences OR max 4 bullets. No filler, no preamble.
+Rules: use short lines and bullets (• ) so replies are easy to scan. Max ~6 short lines. No filler, no preamble.
 Stay on portfolio topics only. Prefer email for contact; message before calling.
 If unknown, say you can only help with Dioame's portfolio.`;
 

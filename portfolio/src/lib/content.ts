@@ -22,9 +22,181 @@ export const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#projects", label: "Labs" },
+  { href: "#experience", label: "Experience" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
 ] as const;
+
+export type WorkAccomplishment = {
+  title: string;
+  items?: string[];
+};
+
+export type WorkRole = {
+  id: string;
+  period: string;
+  position: string;
+  unit?: string;
+  supervisor?: string;
+  organization: string;
+  location?: string;
+  duties: string;
+  accomplishments: WorkAccomplishment[];
+  current?: boolean;
+};
+
+/** Work Experience Sheet (WES) roles — DSWD, HOLD, SFXC, DENR */
+export const workExperience: WorkRole[] = [
+  {
+    id: "dswd-cp3",
+    period: "Sep 2024 – Present",
+    position: "Computer Programmer III",
+    unit: "Regional Information and Communication Technology Section (RICTMS)",
+    supervisor: "John A. Leonardo, ITO II",
+    organization: "Department of Social Welfare and Development",
+    location: "Field Office Caraga",
+    duties: "Streamlining agency operations through system development.",
+    current: true,
+    accomplishments: [
+      {
+        title: "Systems & mobile apps shipped",
+        items: [
+          "DSWD CARAGA Tracking Travel Clearance of Children to Ensure Return and Re-Integration (TTRACERR)",
+          "Field Acceptance and Inspection Tracking Hub (FAITH)",
+          "Caraga Connect — owned initiative approved by RICTMS Head",
+          "LDAP Login and SSO API — owned initiative approved by RICTMS Head",
+          "RICTMS Synapse (Beta) — owned initiative approved by RICTMS Head",
+          "DSWD MYMobile — deployed on Google Play",
+          "FAITH Mobile — deployed on Google Play",
+          "PAID Mobile — deployed on Google Play",
+          "PINPOINT Mobile — deployed on Google Play",
+        ],
+      },
+    ],
+  },
+  {
+    id: "dswd-analyst",
+    period: "Apr 2019 – Sep 2024",
+    position: "AC/Financial Analyst III – IT Officer",
+    unit: "KALAHI CIDSS NCDDP Finance unit",
+    supervisor: "Maricris B. Cuenca, SAO",
+    organization: "Department of Social Welfare and Development",
+    location: "Field Office Caraga",
+    duties:
+      "Develop and enhance modules, lead system development with Trello, maintain documentation, perform daily DB backups, and support KC staff.",
+    accomplishments: [
+      {
+        title: "Community Finance Management System",
+        items: [
+          "Cost Analysis; Liquidation & Transmittal; Report of Disbursement",
+          "Municipal Local Counter Part Contribution Delivery Tracking",
+          "Final Liquidation Tracking; Municipal Trust Fund Delivery",
+          "Full Blown Tracking; Municipal Disbursement Plan with consolidated/monthly reports",
+          "Dashboard for grants, utilization, and liquidation summaries",
+          "Video walkthroughs, documentation, monthly finance meeting demos",
+        ],
+      },
+      {
+        title: "Account Management System",
+        items: [
+          "Tracked KC proposals from WFP → PPMP → PR → PO through billing",
+          "Unpaid Obligation module; daily database backups",
+        ],
+      },
+      {
+        title: "KC Web App",
+        items: [
+          "SMS query for TEV, Travel Order, and project fund queries",
+          "Automated Travel Order Request generation",
+        ],
+      },
+      {
+        title: "Human Resource Information System (HIReS)",
+        items: [
+          "Master lists for offices, positions, sector, fund source, SSL salary grades",
+          "Authority to Hire workflows with auto-generated reports",
+          "Staff deployment, augmentation, termination/resignation/transfer charging",
+          "Regional Special Order (RSO) and intro letter generation",
+        ],
+      },
+      {
+        title: "KC Navigator & Dashboard",
+        items: [
+          "Online/offline project maps (Cordova), camera & file upload, NPMO API",
+          "KC Dashboard consolidator with SSO across KC, DSWD Mainstream, and NPMO",
+        ],
+      },
+      {
+        title: "Technical leadership",
+        items: [
+          "Interconnected KC systems for single-credential login",
+          "Business Enterprise System reconfiguration; technical assistance to KC staff",
+        ],
+      },
+    ],
+  },
+  {
+    id: "hold",
+    period: "Jul 2020 – Present",
+    position: "Technical Specialist",
+    organization: "HOLD Bookkeeping and Business Consultancy Services",
+    duties: "Create systems based on client needs.",
+    current: true,
+    accomplishments: [
+      {
+        title: "Business Information System",
+        items: [
+          "Revenue & expense, assets, liabilities, capital, and other transactions",
+          "Reports, financial statements, trial balance, income statement, journal entry",
+          "Staffing, payroll, and HR transactions",
+          "Member and coop borrowings transactions",
+        ],
+      },
+    ],
+  },
+  {
+    id: "sfxc",
+    period: "Jun 2018 – Mar 2019",
+    position: "Technical Support / IT Instructor",
+    unit: "College of Business",
+    supervisor: "Engr. Irene May Escauso",
+    organization: "Saint Francis Xavier College",
+    location: "San Francisco, Agusan del Sur",
+    duties:
+      "Educate and train students in IT fields, support staff, and maintain computer laboratory hardware and software.",
+    accomplishments: [
+      {
+        title: "Teaching & lab support",
+        items: [
+          "Software Engineering, OOP, Network Admin, Basic Programming",
+          "Data Structures & Algorithms, IT Theory, IP addressing labs",
+          "Capstone project mentoring and incident reporting for lab issues",
+        ],
+      },
+    ],
+  },
+  {
+    id: "denr-ojt",
+    period: "Jun 2017 – Aug 2017",
+    position: "On the Job Trainee",
+    unit: "Human Resource Development Office",
+    supervisor: "Johannah A. Aguilar",
+    organization: "Department of Environment and Natural Resources",
+    location: "Regional Office, Butuan City",
+    duties:
+      "Develop a Human Resource Information System and provide technical assistance to HR staff.",
+    accomplishments: [
+      {
+        title: "Web-based HR Information System",
+        items: [
+          "Employee records; trainings and seminars tracking",
+          "Provincial/municipal/city offices submit scanned trainings for regional review",
+          "Consolidated staffing and training reports with prioritization analytics",
+        ],
+      },
+    ],
+  },
+];
 
 export const trustStacks = [
   "Laravel",

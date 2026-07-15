@@ -9,6 +9,7 @@ import {
   resume,
   site,
   skillCategories,
+  workExperience,
 } from "@/lib/content";
 
 export default function ResumePage() {
@@ -129,16 +130,52 @@ export default function ResumePage() {
             <h2 className="border-b-2 border-primary/10 pb-2 font-heading text-sm font-bold uppercase tracking-wider text-primary">
               Professional Experience
             </h2>
-            <div className="mt-4">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="font-semibold text-primary-deep">
-                  {resume.experience.title}
-                </h3>
-                <span className="text-sm text-muted">{resume.experience.period}</span>
+            <div className="mt-4 space-y-6">
+              {workExperience.map((role) => (
+                <div key={role.id}>
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="font-semibold text-primary-deep">
+                      {role.position}
+                    </h3>
+                    <span className="text-sm text-muted">{role.period}</span>
+                  </div>
+                  <p className="mt-0.5 text-sm font-medium text-ink">
+                    {role.organization}
+                    {role.location ? ` · ${role.location}` : ""}
+                  </p>
+                  {role.unit ? (
+                    <p className="mt-0.5 text-xs text-muted">{role.unit}</p>
+                  ) : null}
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {role.duties}
+                  </p>
+                  <ul className="mt-2 space-y-1.5">
+                    {role.accomplishments.flatMap((block) =>
+                      (block.items ?? []).slice(0, 4).map((item) => (
+                        <li
+                          key={`${role.id}-${item}`}
+                          className="text-sm text-muted before:mr-2 before:text-primary before:content-['•']"
+                        >
+                          {item}
+                        </li>
+                      )),
+                    )}
+                  </ul>
+                </div>
+              ))}
+              <div className="border-t border-primary/10 pt-4">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="font-semibold text-primary-deep">
+                    {resume.experience.title}
+                  </h3>
+                  <span className="text-sm text-muted">
+                    {resume.experience.period}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {resume.experience.body}
+                </p>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {resume.experience.body}
-              </p>
             </div>
           </section>
 
