@@ -1,0 +1,40 @@
+---
+description: When user says deploy-app, build Next.js portfolio and copy static export to repo root
+alwaysApply: true
+---
+
+# deploy-app
+
+When the user says **deploy-app** (or clearly asks to deploy the portfolio app the same way), run this workflow. Do not ask for confirmation unless a step fails.
+
+## Steps (run in order)
+
+1. Build the Next.js portfolio static export:
+
+```powershell
+cd portfolio
+npm run build
+```
+
+2. Ensure Jekyll ignores `_next` on GitHub Pages:
+
+```powershell
+New-Item -ItemType File -Path "out\.nojekyll" -Force | Out-Null
+```
+
+3. Copy everything from `portfolio/out/` into the **repository root** (parent of `portfolio/`):
+
+```powershell
+Copy-Item -Path "out\*" -Destination ".." -Recurse -Force
+```
+
+4. Verify at repo root: `index.html`, `_next/`, `.nojekyll`, and `resume.html` (or `resume/`) exist.
+
+5. Briefly report success and remind that **commit + push** is still required for GitHub Pages to update — do **not** commit unless the user asks.
+
+## Notes
+
+- Working directory for build/copy commands: `portfolio/`.
+- Destination: repo root `dioame.github.io/` (not inside `portfolio/`).
+- Do not delete unrelated root folders (`flowers/`, `original/`, `portfolio/`, `.cursor/`).
+- If build fails, stop and fix before copying.

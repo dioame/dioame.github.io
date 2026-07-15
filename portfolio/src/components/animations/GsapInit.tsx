@@ -75,19 +75,25 @@ export default function GsapInit() {
       });
     });
 
-    // Stagger groups
+    // Stagger groups — ScrollTrigger.batch (showcase pattern: progressive enter)
     gsap.utils.toArray<HTMLElement>("[data-stagger]").forEach((group) => {
-      const items = group.querySelectorAll<HTMLElement>(".stagger-item");
-      gsap.to(items, {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        stagger: 0.08,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: group,
-          start: "top 85%",
-          toggleActions: "play none none none",
+      const items = gsap.utils.toArray<HTMLElement>(
+        group.querySelectorAll(".stagger-item"),
+      );
+      gsap.set(items, { opacity: 0, y: 36 });
+
+      ScrollTrigger.batch(items, {
+        start: "top 88%",
+        once: true,
+        onEnter: (batch) => {
+          gsap.to(batch, {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            stagger: 0.08,
+            ease: "expo.out",
+            overwrite: true,
+          });
         },
       });
     });

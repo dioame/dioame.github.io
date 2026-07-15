@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import ChatBot from "@/components/chatbot/ChatBot";
 import "./globals.css";
 import { site } from "@/lib/content";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <ChatBot />
       </body>
     </html>
   );

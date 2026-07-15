@@ -26,56 +26,55 @@ export default function MobileApps() {
     const header = root.querySelectorAll<HTMLElement>(".apps-header-anim");
 
     if (prefersReducedMotion()) {
-      gsap.set([header, cards, icons], { clearProps: "all", opacity: 1, y: 0, scale: 1 });
+      gsap.set([header, cards, icons], {
+        clearProps: "all",
+        opacity: 1,
+        y: 0,
+        clipPath: "none",
+      });
       return;
     }
 
-    const ctx = gsap.context(() => {
-      gsap.set(header, { opacity: 0, y: 28 });
-      gsap.set(cards, { opacity: 0, y: 48, scale: 0.94 });
-      gsap.set(icons, { scale: 0.6, opacity: 0 });
+    const { ScrollTrigger } = api;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: root,
-          start: "top 78%",
-          toggleActions: "play none none none",
+    const ctx = gsap.context(() => {
+      // Showcase-style: header once, then batch wipe cards as they enter
+      gsap.set(header, { opacity: 0, y: 20 });
+      gsap.set(cards, { clipPath: "inset(100% 0 0 0)", opacity: 1 });
+      gsap.set(icons, { opacity: 0, y: 10 });
+
+      ScrollTrigger.create({
+        trigger: root,
+        start: "top 80%",
+        once: true,
+        onEnter: () => {
+          gsap.to(header, {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            stagger: 0.08,
+            ease: "expo.out",
+          });
         },
       });
 
-      tl.to(header, {
-        opacity: 1,
-        y: 0,
-        duration: 0.65,
-        stagger: 0.1,
-        ease: "power3.out",
-      })
-        .to(
-          cards,
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.7,
-            stagger: {
-              each: 0.09,
-              from: "start",
-            },
-            ease: "power3.out",
-          },
-          "-=0.25",
-        )
-        .to(
-          icons,
-          {
-            opacity: 1,
-            scale: 1,
-            duration: 0.45,
-            stagger: 0.09,
-            ease: "back.out(1.6)",
-          },
-          "-=0.55",
-        );
+      ScrollTrigger.batch(cards, {
+        start: "top 92%",
+        once: true,
+        onEnter: (batch) => {
+          batch.forEach((card, i) => {
+            const icon = card.querySelector<HTMLElement>(".app-card-icon");
+            const tl = gsap.timeline({
+              delay: i * 0.06,
+              defaults: { ease: "expo.out" },
+            });
+            tl.to(card, { clipPath: "inset(0% 0 0 0)", duration: 1 });
+            if (icon) {
+              tl.to(icon, { opacity: 1, y: 0, duration: 0.5 }, "-=0.45");
+            }
+          });
+        },
+      });
 
       const cleanups: Array<() => void> = [];
 
@@ -147,7 +146,7 @@ export default function MobileApps() {
               target="_blank"
               rel="noopener noreferrer"
               data-featured={featured ? "true" : "false"}
-              className={`app-card group flex items-start gap-4 rounded-2xl border p-4 cursor-pointer focus-ring ${
+              className={`app-card group flex items-start gap-4 rounded-2xl border p-4 will-change-[clip-path] cursor-pointer focus-ring ${
                 featured
                   ? "border-brass/35 bg-white/10"
                   : "border-white/10 bg-white/[0.04]"
