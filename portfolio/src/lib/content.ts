@@ -22,6 +22,7 @@ export const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#projects", label: "Labs" },
+  { href: "#apps", label: "Apps" },
   { href: "#experience", label: "Experience" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
@@ -391,6 +392,75 @@ export const hobbyProjects = [
     featured: true,
   },
 ] as const;
+
+/** Verified creator profile on AppsRecord — the full shipped-app catalogue */
+export const appsRecord = {
+  href: "https://apps.rendovations.com/creators/dioame-jade-rendon",
+  domain: "apps.rendovations.com",
+  location: "Butuan City, Philippines",
+  rating: "5.0",
+  totalApps: 16,
+  webApps: 9,
+  mobileAppCount: 7,
+  intro:
+    "AppsRecord is my verified creator profile — the complete catalogue of what I've shipped, from government field tools on Google Play to browser-based utilities. Public ratings, screenshots, and live links you can open right now.",
+  categories: [
+    {
+      name: "Government",
+      count: 5,
+      icon: "landmark" as const,
+      apps: "FAITH · MyMobile · PAID · WorkSPACE · Pinpoint",
+    },
+    {
+      name: "Utilities",
+      count: 4,
+      icon: "wrench" as const,
+      apps: "EdropQR · wamSQLITE · wamiBucket · WamPDF",
+    },
+    {
+      name: "Finance",
+      count: 3,
+      icon: "wallet" as const,
+      apps: "LiTrackoo · WamPOS · FundTracker Pro",
+    },
+    {
+      name: "Productivity",
+      count: 2,
+      icon: "gauge" as const,
+      apps: "Kaagap-AI Lokal · Tabulator App",
+    },
+    {
+      name: "Health & Fitness",
+      count: 1,
+      icon: "heart" as const,
+      apps: "EmotiMon",
+    },
+    {
+      name: "Social",
+      count: 1,
+      icon: "users" as const,
+      apps: "Awesome Greetings",
+    },
+  ],
+  appNames: [
+    "LiTrackoo",
+    "WamPOS",
+    "FundTracker Pro",
+    "FAITH Mobile",
+    "DSWD MyMobile",
+    "PAID Mobile",
+    "DSWD WorkSPACE",
+    "Pinpoint",
+    "EmotiMon",
+    "Kaagap-AI Lokal",
+    "Tabulator App",
+    "Awesome Greetings",
+    "EdropQR",
+    "wamSQLITE",
+    "wamiBucket",
+    "WamPDF",
+  ],
+} as const;
 
 export const javbis = {
   tagline: "Accounting that stays in balance.",

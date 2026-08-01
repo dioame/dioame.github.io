@@ -2,6 +2,7 @@ import GsapInit from "@/components/animations/GsapInit";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import About from "@/components/sections/About";
+import AppsRecord from "@/components/sections/AppsRecord";
 import Capabilities from "@/components/sections/Capabilities";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Services />
         <About />
         <Projects />
+        <AppsRecord />
         <Experience />
         <JavBis />
         <Stack />
