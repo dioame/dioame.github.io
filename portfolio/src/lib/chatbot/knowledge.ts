@@ -1,5 +1,6 @@
 import {
   aboutParagraphs,
+  appsRecord,
   hobbyProjects,
   javbis,
   mobileApps,
@@ -147,16 +148,23 @@ export const faqs: FaqItem[] = [
   },
   {
     id: "apps",
-    question: "What mobile apps have you shipped?",
+    question: "What apps have you shipped?",
     keywords: [
       "mobile",
       "app",
+      "apps",
+      "appsrecord",
+      "catalogue",
+      "catalog",
       "play store",
       "google play",
       "dswd",
       "flutterflow",
     ],
     answer: [
+      `Full catalogue (${appsRecord.totalApps} apps) on AppsRecord:`,
+      appsRecord.href,
+      "",
       "Google Play (DSWD Caraga):",
       ...mobileApps.map((a) => `• ${a.title}`),
     ].join("\n"),
@@ -299,7 +307,8 @@ export function buildCompactPortfolioContext(): string {
     `Stack: ${skillLine}.`,
     `Labs: ${hobbyProjects.map((p) => p.title).join(", ")}.`,
     `JavBis: Laravel accounting app (${javbis.href}).`,
-    `Apps: ${mobileApps.map((a) => a.title).join(", ")}.`,
+    `AppsRecord: ${appsRecord.totalApps} apps — ${appsRecord.href}.`,
+    `Mobile (Play): ${mobileApps.map((a) => a.title).join(", ")}.`,
     `Education: ${resume.education.map((e) => e.title).join("; ")}.`,
     `Cert: ${resume.certification.title}.`,
   ].join("\n");

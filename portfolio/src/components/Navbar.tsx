@@ -44,7 +44,7 @@ export default function Navbar() {
           {site.name}
         </a>
 
-        <ul className="hidden items-center gap-0.5 md:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Link
             href="/resume"
             className={`rounded-full border px-3.5 py-2 text-sm font-semibold transition-colors duration-200 cursor-pointer focus-ring ${
@@ -82,7 +82,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`inline-flex size-10 items-center justify-center rounded-xl border transition-colors duration-200 cursor-pointer focus-ring md:hidden ${
+          className={`inline-flex size-10 items-center justify-center rounded-xl border transition-colors duration-200 cursor-pointer focus-ring lg:hidden ${
             solid ? "border-primary/20 text-ink" : "border-white/20 text-white"
           }`}
           aria-expanded={open}
@@ -97,7 +97,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="mx-auto mt-2 max-w-7xl rounded-2xl border border-primary/15 bg-surface/95 p-4 shadow-xl backdrop-blur-2xl md:hidden"
+          className="mx-auto mt-2 max-w-7xl rounded-2xl border border-primary/15 bg-surface/95 p-4 shadow-xl backdrop-blur-2xl lg:hidden"
         >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
