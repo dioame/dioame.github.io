@@ -33,16 +33,6 @@ export default function Footer() {
                 Portfolio
               </a>
             </li>
-            <li>
-              <a href="#apps" className="transition-colors hover:text-white cursor-pointer">
-                Apps
-              </a>
-            </li>
-            <li>
-              <a href="#javbis" className="transition-colors hover:text-white cursor-pointer">
-                JavBis
-              </a>
-            </li>
           </ul>
         </div>
         <div>

@@ -267,8 +267,15 @@ export const skillCategories = [
     tags: ["OpenAI API", "Google Gemini", "Amazon Bedrock", "AI Integration"],
   },
   {
-    title: "Prompt Engineering",
-    tags: ["GitHub Copilot", "Cursor", "Antigravity", "Codex"],
+    title: "Prompt Engineering & AI Workflows",
+    tags: [
+      "Claude",
+      "Codex",
+      "GitHub Copilot",
+      "Cursor",
+      "Frontend Skills",
+      "AI Video Editing",
+    ],
     highlight: true,
   },
   {
@@ -329,7 +336,7 @@ export const capabilities = [
   },
   {
     title: "Prompt Engineering",
-    body: "Daily use of GitHub Copilot, Cursor, Antigravity, and Codex for AI-assisted development",
+    body: "Using Claude, Codex, Copilot, and specialized skills to choose the right AI workflow for frontend development and AI video editing",
     icon: "sparkles" as const,
   },
   {
@@ -461,43 +468,6 @@ export const appsRecord = {
   ],
 } as const;
 
-export const javbis = {
-  tagline: "Accounting that stays in balance.",
-  stack: "Laravel · Laravel Cloud",
-  intro:
-    "JavBis brings chart of accounts, cash flow, journal entry vouchers (JEV) with line-level detail, cash receipts and disbursements, bank accounts, payees, customers, and company context into one clear, audit-friendly system—with cash and non-cash reporting from the same ledger. Built on Laravel and hosted on Laravel Cloud.",
-  href: "https://javbis-master-tg0c6c.free.laravel.cloud/",
-  collaborator: "Javo Ancla, CPA",
-  features: [
-    {
-      title: "Structure your books",
-      desc: "Account types, groups, and chart accounts so every posting lands in the right bucket.",
-      icon: "sitemap" as const,
-    },
-    {
-      title: "Record & trace activity",
-      desc: "Vouchers, lines, banks, and counterparties stay linked for fast review and defensible month-end.",
-      icon: "receipt" as const,
-    },
-    {
-      title: "Report with confidence",
-      desc: "Roll cash flow by period and generate cash and non-cash reports from structured inputs.",
-      icon: "pie" as const,
-    },
-  ],
-  modules: [
-    "ChartAccount",
-    "CashFlow",
-    "Jev & JevLine",
-    "CashReceipt",
-    "CashDisbursement",
-    "BankAccount",
-    "Payee",
-    "Customer",
-    "CompanyInformation",
-  ],
-};
-
 export const mobileApps = [
   {
     title: "DSWD WorkSPACE",
@@ -563,7 +533,7 @@ export const resume = {
   experience: {
     title: "Self-Employed Developer",
     period: "2018 - Present",
-    body: "7+ years of professional development experience building scalable web and mobile applications with a focus on API-based backend systems and modern frontend frameworks. Implemented payment integrations with PayMongo, Stripe, and AltPayNet. Daily use of prompt engineering tools: GitHub Copilot, Cursor, Antigravity, and Codex for AI-assisted development. Implemented real-time socket communication using Laravel Reverb, developed SSO systems with Laravel Passport, and integrated API authentication using Laravel Sanctum and JWT. Experienced in writing complex MySQL queries, working with NoSQL databases, and implementing Firebase and Supabase for data management and real-time features.",
+    body: "7+ years of professional development experience building scalable web and mobile applications with a focus on API-based backend systems and modern frontend frameworks. Implemented payment integrations with PayMongo, Stripe, and AltPayNet. Daily use of Claude, Codex, GitHub Copilot, Cursor, and specialized AI skills for frontend development, prompt engineering, and AI video editing. Implemented real-time socket communication using Laravel Reverb, developed SSO systems with Laravel Passport, and integrated API authentication using Laravel Sanctum and JWT. Experienced in writing complex MySQL queries, working with NoSQL databases, and implementing Firebase and Supabase for data management and real-time features.",
   },
   education: [
     {
