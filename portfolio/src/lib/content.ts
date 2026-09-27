@@ -2,11 +2,11 @@ export const site = {
   name: "Dioame",
   fullName: "Dioame Jade",
   legalName: "Dioame Jade C. Rendon",
-  role: "Full-stack engineer & prompt engineer",
+  role: "Full-stack engineer, prompt engineer & AI video creator",
   tagline: "Self-employed developer",
-  headline: "API-first backends, integrations, and AI-assisted delivery.",
+  headline: "API-first backends, integrations, and AI-powered digital experiences.",
   description:
-    "Portfolio of Dioame Jade — full-stack developer focused on API-first backends, integrations, cloud, and AI-assisted delivery. Open to freelance and project work.",
+    "Portfolio of Dioame Jade — full-stack developer, prompt engineer, and AI video creator focused on API-first systems, integrations, cloud, and AI-powered digital experiences.",
   email: "dioamejade.online@gmail.com",
   phone: "+63 946 710 5070",
   phoneTel: "+639467105070",
@@ -15,7 +15,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/dioame",
   facebook: "https://web.facebook.com/dioame.rendon/",
   promptHighlight:
-    "I now use AI-assisted tools daily — same standards, faster development.",
+    "I use AI-assisted tools daily for software delivery, prompt-led exploration, and visual storytelling—without compromising production standards.",
 };
 
 export const navLinks = [
@@ -234,7 +234,8 @@ export const services = [
 
 export const aboutParagraphs = [
   "I'm a passionate full-stack developer with over 7 years of experience in web and mobile development. I specialize in creating API-based backend systems and have built numerous scalable applications throughout my career.",
-  "Currently, I'm engaged in AI-assisted coding and developing mobile applications using FlutterFlow with API-based backends. I have experience in CI/CD implementation, cloud infrastructure deployment, and integrating third-party services including payment gateways and AI APIs.",
+  "Today, I combine AI-assisted coding, prompt engineering, and AI video generation to turn ideas into working products and engaging visual stories. Alongside developing mobile applications with FlutterFlow and API-based backends, I use generative AI tools to create concepts, visuals, and videos that communicate products in a more memorable way.",
+  "My broader experience includes CI/CD implementation, cloud infrastructure deployment, and third-party integrations spanning payment gateways and AI APIs—giving me the technical foundation to connect creative AI workflows with reliable, production-ready systems.",
 ];
 
 export const skillCategories = [
