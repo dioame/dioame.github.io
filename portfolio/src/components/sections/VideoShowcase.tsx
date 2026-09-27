@@ -9,6 +9,16 @@ const videos = [
     title: "AI Video Portfolio",
     description: "Created with AI-assisted video and visual storytelling tools.",
   },
+  {
+    id: "L1epm2q5HmU",
+    title: "AI Video Portfolio",
+    description: "Another AI-created story blending generated visuals and creative direction.",
+  },
+  {
+    id: "MuH3xXxGtY8",
+    title: "AI Video Portfolio",
+    description: "An AI-assisted video experiment combining visual generation and storytelling.",
+  },
 ] as const;
 
 function getEmbedUrl(videoId: string, soundEnabled: boolean) {
