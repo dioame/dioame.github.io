@@ -42,14 +42,6 @@ export default function Hero() {
         .from(".hero-anim-cta", { opacity: 0, y: 14, duration: 0.45 }, "-=0.25")
         .from(".hero-anim-visual", { opacity: 0, y: 24, duration: 0.7 }, "-=0.5");
 
-      gsap.to(".hero-orb", {
-        y: "+=18",
-        duration: 5,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        stagger: 0.5,
-      });
     }, rootRef);
 
     return () => ctx.revert();
@@ -95,24 +87,23 @@ export default function Hero() {
       id="home"
       ref={rootRef}
       data-theme="dark"
-      className="hero-atmosphere noise relative min-h-[100svh] overflow-hidden text-white"
+      className="relative min-h-[100svh] overflow-hidden bg-black text-white"
     >
-      <div className="pointer-events-none absolute inset-0 mesh-grid" aria-hidden />
-      <div
-        className="hero-orb pointer-events-none absolute -left-28 top-16 size-[28rem] rounded-full bg-primary-bright/25 blur-[100px]"
-        aria-hidden
-      />
-      <div
-        className="hero-orb pointer-events-none absolute -right-20 bottom-0 size-[24rem] rounded-full bg-brass/20 blur-[90px]"
-        aria-hidden
-      />
-
-      <p
-        className="watermark pointer-events-none absolute left-0 top-[20%] z-0 select-none text-[clamp(4rem,16vw,12rem)] text-white/[0.035]"
-        aria-hidden
+      <video
+        className="pointer-events-none absolute inset-0 size-full object-cover motion-reduce:hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
       >
-        DIOAME
-      </p>
+        <source src="/videos/covervid.mp4" type="video/mp4" />
+      </video>
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(3,13,12,0.96)_0%,rgba(6,22,20,0.82)_45%,rgba(6,22,20,0.5)_100%)]"
+        aria-hidden
+      />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col justify-center gap-10 px-5 pb-16 pt-28 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:pb-20 lg:pt-24">
         {/* Copy */}
