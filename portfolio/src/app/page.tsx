@@ -12,6 +12,7 @@ import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import Stack from "@/components/sections/Stack";
 import Trust from "@/components/sections/Trust";
+import VideoShowcase from "@/components/sections/VideoShowcase";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Trust />
         <Services />
         <About />
+        <VideoShowcase />
         <Projects />
         <AppsRecord />
         <Experience />
