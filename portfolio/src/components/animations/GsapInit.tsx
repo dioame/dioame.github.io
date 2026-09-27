@@ -151,35 +151,6 @@ export default function GsapInit() {
       });
     });
 
-    // Pin + horizontal scrub for labs (desktop only)
-    mm.add("(min-width: 900px)", () => {
-      const pin = document.querySelector<HTMLElement>("#projects-pin");
-      const track = document.querySelector<HTMLElement>("#projects-track");
-      if (!pin || !track) return;
-
-      const getScroll = () => Math.max(0, track.scrollWidth - window.innerWidth + 80);
-
-      const tween = gsap.to(track, {
-        x: () => -getScroll(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: pin,
-          start: "top top",
-          end: () => `+=${getScroll()}`,
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      return () => {
-        tween.scrollTrigger?.kill();
-        tween.kill();
-        gsap.set(track, { clearProps: "transform" });
-      };
-    });
-
     // About sticky panel scrub
     mm.add("(min-width: 1024px)", () => {
       const about = document.querySelector<HTMLElement>("#about");

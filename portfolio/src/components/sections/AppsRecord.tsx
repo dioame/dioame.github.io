@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import {
   ArrowUpRight,
   BadgeCheck,
+  Code2,
   Gauge,
   HeartPulse,
   Landmark,
@@ -17,6 +18,7 @@ import { appsRecord } from "@/lib/content";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 
 const categoryIcons = {
+  code: Code2,
   landmark: Landmark,
   wrench: Wrench,
   wallet: Wallet,
@@ -72,19 +74,20 @@ export default function AppsRecord() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="reveal-up max-w-2xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-            AppsRecord · Verified creator
+            Product portfolio · Verified creator
           </p>
           <h2 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             <span className="line-mask">
-              <span>Every app I&rsquo;ve shipped,</span>
+              <span>Real products.</span>
             </span>
             <span className="line-mask mt-1 block text-primary">
-              <span>in one place.</span>
+              <span>Verified and ready to explore.</span>
             </span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-            The sections above are highlights. My full catalogue lives on
-            AppsRecord — browse it end to end.
+            Explore all {appsRecord.totalApps} published web and mobile applications—from
+            government field tools to finance platforms, productivity products, and
+            browser-based utilities.
           </p>
         </div>
 

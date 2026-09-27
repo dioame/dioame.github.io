@@ -149,10 +149,10 @@ export default function Hero() {
               <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#projects"
+              href="#apps"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 cursor-pointer focus-ring"
             >
-              Explore labs
+              Explore portfolio
               <ArrowDownRight className="size-4" />
             </a>
           </div>

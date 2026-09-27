@@ -8,7 +8,6 @@ import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 import JavBis from "@/components/sections/JavBis";
-import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import Stack from "@/components/sections/Stack";
 import Trust from "@/components/sections/Trust";
@@ -25,7 +24,6 @@ export default function HomePage() {
         <Services />
         <About />
         <VideoShowcase />
-        <Projects />
         <AppsRecord />
         <Experience />
         <JavBis />

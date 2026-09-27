@@ -29,8 +29,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#projects" className="transition-colors hover:text-white cursor-pointer">
-                Labs
+              <a href="#apps" className="transition-colors hover:text-white cursor-pointer">
+                Portfolio
               </a>
             </li>
             <li>
