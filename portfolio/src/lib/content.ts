@@ -395,8 +395,8 @@ export const appsRecord = {
   domain: "apps.rendovations.com",
   location: "Butuan City, Philippines",
   rating: "5.0",
-  totalApps: 20,
-  webApps: 11,
+  totalApps: 21,
+  webApps: 12,
   mobileAppCount: 9,
   intro:
     "AppsRecord is my trusted creator profile—the complete, independently browsable catalogue of what I've shipped. It brings together developer tools, finance platforms, government field apps, productivity products, and everyday utilities, with ratings and live product pages you can explore.",
@@ -443,6 +443,12 @@ export const appsRecord = {
       icon: "users" as const,
       apps: "Awesome Greetings By Dioame",
     },
+    {
+      name: "Travel",
+      count: 1,
+      icon: "map" as const,
+      apps: "MotoBooking",
+    },
   ],
   appNames: [
     "WamiSSO",
@@ -461,6 +467,7 @@ export const appsRecord = {
     "Kaagap-AI Lokal",
     "Tabulator App",
     "Awesome Greetings By Dioame",
+    "MotoBooking",
     "WamiVoice",
     "BIRFilingKeeper",
     "EdropQR",

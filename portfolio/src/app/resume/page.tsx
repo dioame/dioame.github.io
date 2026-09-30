@@ -15,7 +15,7 @@ import {
 export default function ResumePage() {
   return (
     <div className="atmosphere min-h-screen pb-16">
-      <header className="sticky top-4 z-40 mx-auto flex w-[calc(100%-2rem)] max-w-3xl flex-wrap items-center justify-between gap-3 rounded-full border border-primary/15 bg-surface/90 px-4 py-3 shadow-[0_12px_40px_-20px_rgba(15,23,42,0.16)] backdrop-blur-xl">
+      <header className="sticky top-4 z-40 mx-auto flex w-[calc(100%-2rem)] max-w-3xl flex-wrap items-center justify-between gap-3 rounded-full border border-primary/15 bg-surface/90 px-4 py-3 shadow-[0_12px_40px_-20px_rgba(15,23,42,0.16)] backdrop-blur-xl print:hidden">
         <Link
           href="/"
           className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary-deep transition-colors duration-200 hover:border-primary/35 cursor-pointer focus-ring"

@@ -20,6 +20,7 @@ import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 const categoryIcons = {
   code: Code2,
   landmark: Landmark,
+  map: MapPin,
   wrench: Wrench,
   wallet: Wallet,
   gauge: Gauge,
@@ -74,7 +75,7 @@ export default function AppsRecord() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="reveal-up max-w-2xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-            Product portfolio · Verified creator
+            {appsRecord.totalApps}-app portfolio · Verified creator
           </p>
           <h2 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             <span className="line-mask">
