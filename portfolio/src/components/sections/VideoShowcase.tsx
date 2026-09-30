@@ -19,6 +19,11 @@ const videos = [
     title: "AI Video Portfolio",
     description: "An AI-assisted video experiment combining visual generation and storytelling.",
   },
+  {
+    id: "J2_OQA63ezU",
+    title: "WamiSSO Showcase",
+    description: "A fast-paced product showcase highlighting WamiSSO and its unified sign-on experience.",
+  },
 ] as const;
 
 function getEmbedUrl(videoId: string, soundEnabled: boolean) {
