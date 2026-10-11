@@ -77,15 +77,26 @@ export default function VideoShowcase() {
             </p>
           </div>
 
-          <a
-            href={videoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-fit shrink-0 items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-white focus-ring"
-          >
-            View on YouTube
-            <ExternalLink className="size-4" aria-hidden />
-          </a>
+          <div className="flex shrink-0 flex-col items-start gap-2">
+            <a
+              href="https://www.youtube.com/@dioamejaderendon1417"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring inline-flex min-h-11 items-center gap-2 rounded-full border border-brass/40 px-5 py-3 text-sm font-semibold text-brass transition-colors hover:border-brass hover:bg-brass/10"
+            >
+              Visit my YouTube channel
+              <ExternalLink className="size-4" aria-hidden />
+            </a>
+            <a
+              href={videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white/80 transition-colors hover:text-white"
+            >
+              Watch this video on YouTube
+              <ExternalLink className="size-4" aria-hidden />
+            </a>
+          </div>
         </div>
 
         <div className="reveal-up mt-10 flex flex-col gap-5 rounded-2xl border border-brass/25 bg-white/[0.04] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
