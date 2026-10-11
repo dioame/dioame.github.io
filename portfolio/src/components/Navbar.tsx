@@ -44,7 +44,7 @@ export default function Navbar() {
           {site.name}
         </a>
 
-        <ul className="hidden items-center gap-0.5 lg:flex">
+        <ul className="hidden items-center gap-0.5 xl:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           <Link
             href="/resume"
             className={`rounded-full border px-3.5 py-2 text-sm font-semibold transition-colors duration-200 cursor-pointer focus-ring ${
@@ -71,6 +71,16 @@ export default function Navbar() {
             }`}
           >
             Resume
+          </Link>
+          <Link
+            href="/cover-letter"
+            className={`rounded-full border px-3.5 py-2 text-sm font-semibold transition-colors duration-200 cursor-pointer focus-ring ${
+              solid
+                ? "border-primary/20 text-ink hover:border-primary/45"
+                : "border-white/20 text-white hover:border-white/45"
+            }`}
+          >
+            Cover Letter
           </Link>
           <a
             href="#contact"
@@ -82,7 +92,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`inline-flex size-10 items-center justify-center rounded-xl border transition-colors duration-200 cursor-pointer focus-ring lg:hidden ${
+          className={`inline-flex size-10 items-center justify-center rounded-xl border transition-colors duration-200 cursor-pointer focus-ring xl:hidden ${
             solid ? "border-primary/20 text-ink" : "border-white/20 text-white"
           }`}
           aria-expanded={open}
@@ -97,7 +107,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="mx-auto mt-2 max-w-7xl rounded-2xl border border-primary/15 bg-surface/95 p-4 shadow-xl backdrop-blur-2xl lg:hidden"
+          className="mx-auto mt-2 max-w-7xl rounded-2xl border border-primary/15 bg-surface/95 p-4 shadow-xl backdrop-blur-2xl xl:hidden"
         >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -112,13 +122,20 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-3 flex gap-2 border-t border-primary/10 pt-3">
+          <div className="mt-3 flex flex-wrap gap-2 border-t border-primary/10 pt-3">
             <Link
               href="/resume"
               className="flex-1 rounded-full border border-primary/25 px-3 py-2.5 text-center text-sm font-semibold text-ink cursor-pointer focus-ring"
               onClick={() => setOpen(false)}
             >
               Resume
+            </Link>
+            <Link
+              href="/cover-letter"
+              className="flex-1 whitespace-nowrap rounded-full border border-primary/25 px-3 py-2.5 text-center text-sm font-semibold text-ink cursor-pointer focus-ring"
+              onClick={() => setOpen(false)}
+            >
+              Cover Letter
             </Link>
             <a
               href="#contact"

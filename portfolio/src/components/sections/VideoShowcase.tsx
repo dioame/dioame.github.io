@@ -88,7 +88,28 @@ export default function VideoShowcase() {
           </a>
         </div>
 
-        <div className="reveal-scale mt-10 overflow-hidden rounded-[2rem] border border-white/12 bg-black shadow-[0_40px_90px_-45px_rgba(0,0,0,0.8)]">
+        <div className="reveal-up mt-10 flex flex-col gap-5 rounded-2xl border border-brass/25 bg-white/[0.04] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+          <div>
+            <h3 className="font-heading text-xl font-semibold text-white">
+              My complete AI video collection
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/65">
+              All my portfolio videos, made with AI video generators, compiled in
+              one place on WamiVids.
+            </p>
+          </div>
+          <a
+            href="https://wamivids.rendovations.com/creator/5/wammycoder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring inline-flex min-h-11 w-fit shrink-0 items-center gap-2 rounded-full border border-brass/40 px-5 py-3 text-sm font-semibold text-brass transition-colors hover:border-brass hover:bg-brass/10"
+          >
+            View all videos on WamiVids
+            <ExternalLink className="size-4" aria-hidden />
+          </a>
+        </div>
+
+        <div className="reveal-scale mt-8 overflow-hidden rounded-[2rem] border border-white/12 bg-black shadow-[0_40px_90px_-45px_rgba(0,0,0,0.8)]">
           <div className="relative aspect-video">
             <iframe
               key={`${activeVideo.id}-${soundEnabled ? "sound" : "muted"}`}
