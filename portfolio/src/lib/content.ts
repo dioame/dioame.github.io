@@ -11,6 +11,8 @@ export const site = {
   phone: "+63 946 710 5070",
   phoneTel: "+639467105070",
   location: "Philippines",
+  portfolio: "https://dioame.github.io",
+  rendovations: "https://rendovations.com",
   github: "https://github.com/dioame",
   linkedin: "https://www.linkedin.com/in/dioame",
   facebook: "https://web.facebook.com/dioame.rendon/",

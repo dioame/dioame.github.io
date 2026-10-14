@@ -52,6 +52,18 @@ export default function CoverLetterPage() {
               <a href={`tel:${site.phoneTel}`} className="focus-ring rounded hover:text-primary hover:underline">
                 {site.phone}
               </a>
+              <span>
+                Portfolio:{" "}
+                <a href={site.portfolio} target="_blank" rel="noopener noreferrer" className="focus-ring rounded hover:text-primary hover:underline">
+                  dioame.github.io
+                </a>
+              </span>
+              <span>
+                Rendovations:{" "}
+                <a href={site.rendovations} target="_blank" rel="noopener noreferrer" className="focus-ring rounded hover:text-primary hover:underline">
+                  rendovations.com
+                </a>
+              </span>
             </div>
           </header>
 
@@ -87,7 +99,17 @@ export default function CoverLetterPage() {
               responsibility for the work entrusted to me. I would welcome the
               opportunity to learn about your team’s priorities and discuss how
               my experience could support your projects. My resume and portfolio
+              at{" "}
+              <a href={site.portfolio} target="_blank" rel="noopener noreferrer" className="focus-ring rounded text-primary underline underline-offset-2">
+                dioame.github.io
+              </a>{" "}
               provide further details about my background and completed work.
+              You can also explore{" "}
+              <a href={site.rendovations} target="_blank" rel="noopener noreferrer" className="focus-ring rounded text-primary underline underline-offset-2">
+                rendovations.com
+              </a>{" "}
+              for an overview of software development, AI automation, API
+              integration, and AI video editing services.
             </p>
             <p>
               Thank you for your time and consideration. I would be grateful for

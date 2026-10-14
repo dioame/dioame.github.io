@@ -88,6 +88,18 @@ export default function ResumePage() {
                   <strong className="text-primary-deep">Location:</strong>{" "}
                   {site.location}
                 </span>
+                <span>
+                  <strong className="text-primary-deep">Portfolio:</strong>{" "}
+                  <a href={site.portfolio} target="_blank" rel="noopener noreferrer" className="focus-ring hover:text-primary hover:underline">
+                    dioame.github.io
+                  </a>
+                </span>
+                <span>
+                  <strong className="text-primary-deep">Rendovations:</strong>{" "}
+                  <a href={site.rendovations} target="_blank" rel="noopener noreferrer" className="focus-ring hover:text-primary hover:underline">
+                    rendovations.com
+                  </a>
+                </span>
               </div>
             </div>
           </header>
