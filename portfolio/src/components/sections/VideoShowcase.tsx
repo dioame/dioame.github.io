@@ -1,9 +1,16 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, ExternalLink, Volume2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Gamepad2, Volume2 } from "lucide-react";
 import { useState } from "react";
 
 const videos = [
+  {
+    id: "_4fZ-thdHJA",
+    title: "Heroes of Wami — Official Game Trailer",
+    description: "Tactical Elemental Card Battler · Command 40 heroes across 5 elemental affinities and 5 tactical lanes in the arena of Wami.",
+    gameLink: "https://wami-heroes.rendovations.com/",
+    badge: "Featured Game",
+  },
   {
     id: "OLh5BEnl8R8",
     title: "AI Video Portfolio",
@@ -65,19 +72,30 @@ export default function VideoShowcase() {
         <div className="reveal-up flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brass">
-              Video portfolio
+              Video portfolio &amp; Showcases
             </p>
             <h2 className="mt-3 font-heading text-4xl font-semibold tracking-tight sm:text-5xl">
-              Ideas brought to life with AI
+              Trailers, games &amp; AI stories
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
-              A growing collection of videos I create using AI technology—combining
-              storytelling, generated visuals, and creative tools to present my work in
-              new ways.
+              A collection of trailers, product demonstrations, and cinematic stories
+              showcasing game development, AI video workflows, and creative engineering.
             </p>
           </div>
 
           <div className="flex shrink-0 flex-col items-start gap-2">
+            {"gameLink" in activeVideo && activeVideo.gameLink ? (
+              <a
+                href={activeVideo.gameLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring inline-flex min-h-11 items-center gap-2 rounded-full bg-brass px-5 py-2.5 text-sm font-bold text-primary-deep shadow-lg transition-transform hover:scale-[1.03] hover:bg-primary-bright"
+              >
+                <Gamepad2 className="size-4" aria-hidden />
+                Play Heroes of Wami
+                <ExternalLink className="size-4" aria-hidden />
+              </a>
+            ) : null}
             <a
               href="https://www.youtube.com/@dioamejaderendon1417"
               target="_blank"
@@ -147,9 +165,16 @@ export default function VideoShowcase() {
           <div className="flex flex-col gap-5 border-t border-white/10 bg-white/[0.04] px-5 py-5 sm:px-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="font-heading text-base font-semibold text-white">
-                  {activeVideo.title} · {String(activeIndex + 1).padStart(2, "0")}
-                </p>
+                <div className="flex items-center gap-2.5">
+                  <p className="font-heading text-base font-semibold text-white">
+                    {activeVideo.title} · {String(activeIndex + 1).padStart(2, "0")}
+                  </p>
+                  {"badge" in activeVideo && activeVideo.badge ? (
+                    <span className="rounded-full border border-brass/40 bg-brass/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brass">
+                      {activeVideo.badge}
+                    </span>
+                  ) : null}
+                </div>
                 <p className="mt-1 text-sm text-white/55">{activeVideo.description}</p>
               </div>
 

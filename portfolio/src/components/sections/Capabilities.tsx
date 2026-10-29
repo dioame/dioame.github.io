@@ -14,6 +14,7 @@ import {
   Smartphone,
   Sparkles,
   Zap,
+  Gamepad2,
 } from "lucide-react";
 import { capabilities } from "@/lib/content";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
@@ -31,6 +32,7 @@ const icons = {
   radio: Radio,
   key: KeyRound,
   zap: Zap,
+  gamepad: Gamepad2,
 };
 
 /**

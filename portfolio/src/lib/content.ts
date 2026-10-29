@@ -2,11 +2,11 @@ export const site = {
   name: "Dioame",
   fullName: "Dioame Jade",
   legalName: "Dioame Jade C. Rendon",
-  role: "Full-stack engineer, prompt engineer & AI video creator",
+  role: "Full-stack engineer, game developer, prompt engineer & AI video creator",
   tagline: "Self-employed developer",
-  headline: "API-first backends, integrations, and AI-powered digital experiences.",
+  headline: "API-first backends, tactical games, integrations, and AI-powered digital experiences.",
   description:
-    "Portfolio of Dioame Jade — full-stack developer, prompt engineer, and AI video creator focused on API-first systems, integrations, cloud, and AI-powered digital experiences.",
+    "Portfolio of Dioame Jade — full-stack developer, game developer, prompt engineer, and AI video creator focused on API-first systems, interactive games, cloud, and AI-powered digital experiences.",
   email: "dioamejade.online@gmail.com",
   phone: "+63 946 710 5070",
   phoneTel: "+639467105070",
@@ -241,6 +241,17 @@ export const aboutParagraphs = [
 
 export const skillCategories = [
   {
+    title: "Game Development",
+    tags: [
+      "WebGL",
+      "Canvas / HTML5 Games",
+      "Game Design",
+      "Card Battler Mechanics",
+      "Cross-Platform Gameplay",
+    ],
+    highlight: true,
+  },
+  {
     title: "Core Technologies",
     tags: ["HTML", "JavaScript", "PHP", "Node.js", "Python"],
   },
@@ -301,6 +312,11 @@ export const skillCategories = [
 ] as const;
 
 export const capabilities = [
+  {
+    title: "Game Development",
+    body: "Designing and engineering interactive games like Heroes of Wami, featuring tactical card combat, WebGL graphics, and elemental mechanics",
+    icon: "gamepad" as const,
+  },
   {
     title: "Self-Employed Developer",
     body: "7+ years of professional development experience",
@@ -363,7 +379,36 @@ export const capabilities = [
   },
 ] as const;
 
+export const featuredGame = {
+  title: "Heroes of Wami",
+  subtitle: "Tactical Elemental Card Battler",
+  badge: "Game Development · Featured Showcase",
+  description:
+    "Step into the sacred stone arena of Heroes of Wami. Command the Forty Named heroes across five elemental affinities in a tactical 5-lane card battler with rich combat synergies, interactive card mechanics, and instant cross-platform play.",
+  gameUrl: "https://wami-heroes.rendovations.com/",
+  trailerVideoId: "_4fZ-thdHJA",
+  trailerUrl: "https://www.youtube.com/watch?v=_4fZ-thdHJA",
+  highlights: [
+    { label: "Tactical Combat", value: "5 Lane System" },
+    { label: "Elements", value: "Fire · Water · Earth · Air · Void" },
+    { label: "Roster", value: "40 Named Legends" },
+    { label: "Platform", value: "Instant WebGL & Android Beta" },
+  ],
+  tags: [
+    "WebGL",
+    "Game Design",
+    "Tactical Card Battler",
+    "Elemental Synergies",
+    "Cross-Platform",
+  ],
+} as const;
+
 export const hobbyProjects = [
+  {
+    title: "Heroes of Wami",
+    desc: "Tactical elemental card battler (WebGL & Android)",
+    href: "https://wami-heroes.rendovations.com/",
+  },
   {
     title: "DSWD KORAMBUSAN 2026",
     desc: "Live scoring & rankings for events",
@@ -397,12 +442,18 @@ export const appsRecord = {
   domain: "apps.rendovations.com",
   location: "Butuan City, Philippines",
   rating: "5.0",
-  totalApps: 21,
-  webApps: 12,
+  totalApps: 22,
+  webApps: 13,
   mobileAppCount: 9,
   intro:
     "AppsRecord is my trusted creator profile—the complete, independently browsable catalogue of what I've shipped. It brings together developer tools, finance platforms, government field apps, productivity products, and everyday utilities, with ratings and live product pages you can explore.",
   categories: [
+    {
+      name: "Game Development",
+      count: 1,
+      icon: "gamepad" as const,
+      apps: "Heroes of Wami (Tactical Card Battler)",
+    },
     {
       name: "Developer Tools",
       count: 3,
@@ -453,6 +504,7 @@ export const appsRecord = {
     },
   ],
   appNames: [
+    "Heroes of Wami",
     "WamiSSO",
     "wamSQLITE",
     "wamiBucket",

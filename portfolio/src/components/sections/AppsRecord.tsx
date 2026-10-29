@@ -5,16 +5,18 @@ import {
   ArrowUpRight,
   BadgeCheck,
   Code2,
+  Gamepad2,
   Gauge,
   HeartPulse,
   Landmark,
   MapPin,
+  Play,
   Star,
   Users,
   Wallet,
   Wrench,
 } from "lucide-react";
-import { appsRecord } from "@/lib/content";
+import { appsRecord, featuredGame } from "@/lib/content";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 
 const categoryIcons = {
@@ -26,6 +28,7 @@ const categoryIcons = {
   gauge: Gauge,
   heart: HeartPulse,
   users: Users,
+  gamepad: Gamepad2,
 };
 
 const quickStats = [
@@ -87,12 +90,138 @@ export default function AppsRecord() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             Explore all {appsRecord.totalApps} published web and mobile applications—from
-            government field tools to finance platforms, productivity products, and
+            interactive games and government field tools to finance platforms, productivity products, and
             browser-based utilities.
           </p>
         </div>
 
-        <div className="reveal-scale relative mt-12 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,#0a2e2a_0%,#061614_55%,#0f3d38_100%)] text-white shadow-[0_44px_90px_-46px_rgba(4,19,18,0.75)] sm:rounded-[2.5rem]">
+        {/* Featured Showcase: Game Development */}
+        <div className="reveal-scale relative mt-12 overflow-hidden rounded-[2rem] border border-brass/35 bg-[linear-gradient(150deg,#070a10_0%,#0c1420_45%,#150e24_100%)] text-white shadow-[0_44px_90px_-40px_rgba(0,0,0,0.85)] sm:rounded-[2.5rem]">
+          <div className="pointer-events-none absolute inset-0 mesh-grid opacity-30" aria-hidden />
+          <div className="pointer-events-none absolute -right-20 -top-20 size-96 rounded-full bg-brass/15 blur-[120px]" aria-hidden />
+          <div className="pointer-events-none absolute -left-20 bottom-0 size-80 rounded-full bg-purple-600/15 blur-[110px]" aria-hidden />
+
+          <div className="relative grid gap-8 p-6 sm:p-10 lg:grid-cols-12 lg:gap-10 lg:p-12 items-center">
+            {/* Left Col: Info & CTAs */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-brass/40 bg-brass/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brass">
+                    <Gamepad2 className="size-3.5" aria-hidden />
+                    Game Development
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                    <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
+                    Playable in Browser
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-400/30 bg-purple-400/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-purple-300">
+                    Tactical Card Battler
+                  </span>
+                </div>
+
+                <h3 className="mt-5 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  {featuredGame.title}
+                </h3>
+                <p className="mt-2 font-heading text-lg font-medium text-brass/90">
+                  {featuredGame.subtitle}
+                </p>
+
+                <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
+                  {featuredGame.description}
+                </p>
+
+                {/* Elemental Affinities Pills */}
+                <div className="mt-6 flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-white/50 mr-1">
+                    5 Elements:
+                  </span>
+                  <span className="rounded-full border border-[#ff5733]/40 bg-[#ff5733]/15 px-2.5 py-1 text-xs font-semibold text-[#ff8066]">
+                    🔥 Fire
+                  </span>
+                  <span className="rounded-full border border-[#00b4d8]/40 bg-[#00b4d8]/15 px-2.5 py-1 text-xs font-semibold text-[#48cae4]">
+                    💧 Water
+                  </span>
+                  <span className="rounded-full border border-[#52b788]/40 bg-[#52b788]/15 px-2.5 py-1 text-xs font-semibold text-[#74c69d]">
+                    🌿 Earth
+                  </span>
+                  <span className="rounded-full border border-[#38bdf8]/40 bg-[#38bdf8]/15 px-2.5 py-1 text-xs font-semibold text-[#7dd3fc]">
+                    💨 Air
+                  </span>
+                  <span className="rounded-full border border-[#a855f7]/40 bg-[#a855f7]/15 px-2.5 py-1 text-xs font-semibold text-[#c084fc]">
+                    🔮 Void
+                  </span>
+                </div>
+
+                {/* Highlights Grid */}
+                <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+                  {featuredGame.highlights.map((h) => (
+                    <div key={h.label} className="rounded-xl border border-white/10 bg-white/[0.04] p-3">
+                      <div className="text-[10px] uppercase tracking-wider text-white/45 font-medium">{h.label}</div>
+                      <div className="mt-1 font-heading text-xs sm:text-sm font-semibold text-white/90">{h.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href={featuredGame.gameUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-brass via-[#ffd27a] to-brass px-7 py-4 text-sm font-bold text-[#070a10] shadow-[0_12px_28px_-8px_rgba(212,175,99,0.55)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_16px_32px_-8px_rgba(212,175,99,0.7)] cursor-pointer focus-ring"
+                >
+                  <Gamepad2 className="size-4 transition-transform group-hover:rotate-12" />
+                  Play Heroes of Wami
+                  <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href={featuredGame.trailerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 text-sm font-semibold text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 cursor-pointer focus-ring"
+                >
+                  <Play className="size-4 fill-white text-white" />
+                  Watch Trailer
+                  <ArrowUpRight className="size-4 text-white/60" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right Col: Video Trailer */}
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden rounded-2xl border border-brass/30 bg-black shadow-2xl">
+                <div className="aspect-video w-full">
+                  <iframe
+                    className="size-full"
+                    src={`https://www.youtube-nocookie.com/embed/${featuredGame.trailerVideoId}?rel=0&playsinline=1`}
+                    title="Heroes of Wami — Official Game Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="border-t border-white/10 bg-white/[0.04] p-3.5 flex items-center justify-between text-xs text-white/70">
+                  <span className="flex items-center gap-2 font-mono">
+                    <span className="size-2 rounded-full bg-red-500 animate-pulse" />
+                    Official Gameplay Trailer
+                  </span>
+                  <a
+                    href={featuredGame.gameUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brass hover:underline inline-flex items-center gap-1 font-semibold"
+                  >
+                    wami-heroes.rendovations.com
+                    <ArrowUpRight className="size-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Existing AppsRecord creator profile card */}
+        <div className="reveal-scale relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,#0a2e2a_0%,#061614_55%,#0f3d38_100%)] text-white shadow-[0_44px_90px_-46px_rgba(4,19,18,0.75)] sm:rounded-[2.5rem]">
           <div
             className="pointer-events-none absolute inset-0 mesh-grid opacity-50"
             aria-hidden

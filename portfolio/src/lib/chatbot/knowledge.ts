@@ -20,6 +20,8 @@ export type FaqItem = {
 
 export const quickPrompts = [
   "Who is Dioame?",
+  "Tell me about Heroes of Wami game",
+  "Do you do game development?",
   "Where have you worked?",
   "Tell me about DSWD work",
   "What services do you offer?",
@@ -29,6 +31,29 @@ export const quickPrompts = [
 ] as const;
 
 export const faqs: FaqItem[] = [
+  {
+    id: "game",
+    question: "Do you build games?",
+    keywords: [
+      "game",
+      "games",
+      "game development",
+      "heroes of wami",
+      "wami heroes",
+      "tactical game",
+      "card battler",
+      "webgl",
+    ],
+    answer: [
+      "Yes! Featured Game Development:",
+      "• Heroes of Wami — Tactical Elemental Card Battler",
+      "",
+      "A strategic 5-lane card battler with 40 Named legends across 5 elemental affinities (Fire, Water, Earth, Air, Void).",
+      "",
+      "Play online (WebGL): https://wami-heroes.rendovations.com/",
+      "Watch trailer: https://www.youtube.com/watch?v=_4fZ-thdHJA",
+    ].join("\n"),
+  },
   {
     id: "who",
     question: "Who is Dioame?",
